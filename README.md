@@ -25,15 +25,12 @@ pip install -r requirements.txt
 ### Step 1. Prepare peptide and species representations
 
 Peptide sequences are encoded using the pretrained ESM-2 (esm2_t6_8M_UR50D) model.
-
 Run the hierarchical species representation learning module to obtain species embeddings.
 
 ### Step 2. Train the MIC prediction model
 
 After preparing the peptide and species representations, train the HiSpecAMP MIC prediction model.
-
 The training procedure supports three evaluation settings used in the paper: *Warmstart*, *Species-coldstart*, *Peptide-coldstart*.
-
 Run the corresponding train.py script in each setting's folder:
 
 ```bash
