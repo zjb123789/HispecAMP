@@ -6,9 +6,9 @@ This repository contains the implementation of **HiSpecAMP**, a species-aware fr
 
 HiSpecAMP is evaluated under three different scenarios to assess its generalization ability:
 
-* **WarmStart:** Both peptides and species in the test set have been observed during training, while the peptide–species interactions are unseen.
-* **Species-ColdStart:** The species in the test set are completely unseen during training, evaluating generalization to new microbial species.
-* **Peptide-ColdStart:** The peptides in the test set are completely unseen during training, evaluating generalization to new peptide sequences.
+* **Warmstart:** Both peptides and species in the test set have been observed during training, while the peptide–species interactions are unseen.
+* **Species-coldstart:** The species in the test set are completely unseen during training, evaluating generalization to new microbial species.
+* **Peptide-coldstart:** The peptides in the test set are completely unseen during training, evaluating generalization to new peptide sequences.
 
 ## Data Preparation
 
