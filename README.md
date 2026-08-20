@@ -1,44 +1,18 @@
 # HiSpecAMP: Antimicrobial Peptide Activity Prediction Based on Hierarchical Species Representation Learning
 
-This repository contains the implementation of **HiSpecAMP**, a species-aware framework for antimicrobial peptide (AMP) activity prediction. HiSpecAMP is designed to predict the minimum inhibitory concentration (MIC) of antimicrobial peptides against specific microbial species by explicitly modeling pathogen-specific information and peptide–species interactions.
+This repository contains the implementation of **HiSpecAMP**, a species-aware framework for antimicrobial peptide (AMP) activity prediction. HiSpecAMP is designed to predict the minimum inhibitory concentration (MIC) of antimicrobial peptides against specific microbial species by explicitly modeling species-specific information and peptide–species interactions.
 
-## Overview
+## Evaluation Scenarios and Data Splitting
 
-Accurate prediction of antimicrobial peptide activity requires not only modeling peptide sequence characteristics but also considering the target microbial species. Existing AMP prediction methods often focus primarily on peptide representations while providing limited modeling of species-specific effects.
+HiSpecAMP is evaluated under three different scenarios to assess its generalization ability:
 
-To address this limitation, HiSpecAMP introduces a **hierarchical species representation learning** framework that learns biologically meaningful representations of microbial species from their taxonomic relationships. The learned species representations are subsequently incorporated into MIC prediction through a **Feature-wise Linear Modulation (FiLM)** module, enabling species-conditioned modulation of peptide representations.
+* **WarmStart:** Both peptides and species in the test set have been observed during training, while the peptide–species interactions are unseen.
+* **Species-ColdStart:** The species in the test set are completely unseen during training, evaluating generalization to new microbial species.
+* **Peptide-ColdStart:** The peptides in the test set are completely unseen during training, evaluating generalization to new peptide sequences.
 
-The major components of HiSpecAMP include:
+## Data Preparation
 
-* **ESM-2-based peptide representation** for extracting sequence-level peptide features.
-* **Hierarchical species representation learning** to encode microbial taxonomic information.
-* **Species-aware Feature-wise Linear Modulation (FiLM)** to dynamically modulate peptide representations according to the target species.
-* **Peptide–species interaction modeling** to capture complementary and multiplicative interactions between peptide and species representations.
-* **Ranking consistency constraints** to improve the consistency of predicted antimicrobial activity rankings.
-* Evaluation under **WarmStart, Species-ColdStart, and Peptide-ColdStart** settings to assess both conventional prediction performance and generalization to unseen species or peptides.
-
-The overall objective of HiSpecAMP is to provide accurate and biologically informed MIC prediction for AMP–species interactions.
-
-## Model Architecture
-
-The HiSpecAMP framework consists of two major stages:
-
-### 1. Hierarchical Species Representation Learning
-
-Microbial species are represented using taxonomic information and pretrained with hierarchical supervision. The resulting species embeddings capture relationships among microorganisms at multiple taxonomic levels and provide species-aware information for downstream MIC prediction.
-
-### 2. Species-aware MIC Prediction
-
-Given an antimicrobial peptide and a target microbial species:
-
-1. The peptide sequence is encoded using a pretrained **ESM-2** model.
-2. The target species is represented using the pretrained species embedding.
-3. The species representation generates FiLM parameters, including scaling and shifting factors.
-4. The peptide representation is dynamically modulated according to the target species.
-5. The modulated peptide representation and species representation are combined with interaction features.
-6. The resulting peptide–species representation is passed to the prediction network to estimate MIC.
-
-The model is trained using a combination of regression and ranking-related objectives.
+HiSpecAMP uses peptide–species interaction data containing antimicrobial peptide sequences, target microbial species, and experimentally measured MIC values.
 
 ## Environment
 
@@ -83,25 +57,6 @@ If a `requirements.txt` file is provided in this repository, the recommended ins
 ```bash
 pip install -r requirements.txt
 ```
-
-## Data Preparation
-
-HiSpecAMP uses peptide–species interaction data containing antimicrobial peptide sequences, target microbial species, and experimentally measured MIC values.
-
-The processed dataset should contain, at minimum:
-
-* Peptide sequence
-* Peptide identifier
-* Target species
-* MIC value
-* Peptide representation or the corresponding ESM-2 embedding
-* Species representation for the target microorganism
-
-The preprocessing pipeline removes duplicated peptide–species interactions and filters peptide sequences according to the predefined sequence-length criteria.
-
-The species representation used by HiSpecAMP is generated during the hierarchical species representation learning stage and saved for downstream MIC prediction.
-
-Place the processed data and pretrained embeddings in the corresponding paths specified by the configuration files before training.
 
 ## Running HiSpecAMP
 
