@@ -14,51 +14,13 @@ HiSpecAMP is evaluated under three different scenarios to assess its generalizat
 
 HiSpecAMP uses peptide–species interaction data containing antimicrobial peptide sequences, target microbial species, and experimentally measured MIC values.
 
-## Environment
+## Running HiSpecAMP
 
-The experiments were conducted using the following software environment:
-
-* Python
-* PyTorch 2.5.1
-* CUDA 12.6
-* Transformers
-* ESM-2
-* NumPy
-* Pandas
-* Scikit-learn
-* SciPy
-* PyYAML
-* tqdm
-* Biopython
-
-A GPU with CUDA support is recommended for model training and inference.
-
-### Recommended Environment
-
-```bash
-conda create -n hispecamp python=3.10
-conda activate hispecamp
-```
-
-Install PyTorch according to your CUDA environment. For example:
-
-```bash
-pip install torch==2.5.1
-```
-
-Then install the required Python packages:
-
-```bash
-pip install transformers numpy pandas scipy scikit-learn pyyaml tqdm biopython matplotlib
-```
-
-If a `requirements.txt` file is provided in this repository, the recommended installation method is:
+### Environment
 
 ```bash
 pip install -r requirements.txt
 ```
-
-## Running HiSpecAMP
 
 ### Step 1. Prepare peptide representations
 
@@ -84,11 +46,9 @@ After preparing the peptide and species representations, train the HiSpecAMP MIC
 
 The training procedure supports the evaluation settings used in the paper:
 
-* **WarmStart**
-* **Species-ColdStart**
-* **Peptide-ColdStart**
-
-The model uses species-conditioned FiLM modulation together with peptide–species interaction features for MIC prediction.
+* **Warmstart**
+* **Species-coldstart**
+* **Peptide-coldstart**
 
 ### Step 4. Model evaluation
 
