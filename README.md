@@ -34,6 +34,12 @@ After preparing the peptide and species representations, train the HiSpecAMP MIC
 
 The training procedure supports three evaluation settings used in the paper: *Warmstart*, *Species-coldstart*, *Peptide-coldstart*.
 
+Run the corresponding train.py script in each setting's folder:
+
+```bash
+python train.py
+```
+
 ## License
 
 This project is intended for academic and research purposes. Please refer to the repository license for details.
