@@ -30,7 +30,9 @@ SEED = 1
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 MAX_EPOCHS = 1
 PATIENCE = 30
-PATH_EMB_PATH = "../54_species_embeddings.pt"
+PATH_EMB_PATH = "../pathogen_embeddings.pt"
+
+TAXONOMY_JSON_PATH = "../pathogen_taxonomy_by_taxid.json"
 
 BASE_DATA_PATH = "./data/com{}"
 COMS = [1, 2, 3, 4, 5]
@@ -88,6 +90,23 @@ def evaluate(y_true, y_pred):
         "Kendall": kendalltau(y_true, y_pred)[0],
     }
 
+def load_name2taxid(json_path):
+    """从 taxonomy JSON 构建 scientific_name -> taxid(str) 映射。"""
+    with open(json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    # 兼容 {"pathogen_to_taxonomy": {...}} 或直接 {...} 两种结构
+    data = data.get("pathogen_to_taxonomy", data)
+
+    name2taxid = {}
+    for taxid, info in data.items():
+        if not isinstance(info, dict):
+            continue
+        name = (info.get("scientific_name") or "").strip()
+        if not name:
+            continue
+        name2taxid.setdefault(name, str(taxid).strip())
+    return name2taxid
+
 # =========================
 # Dataset
 # =========================
@@ -104,16 +123,45 @@ class AlignmentDataset(Dataset):
         return self.X[idx], self.y[idx], self.pid[idx]
 
 # =========================
-# Feature builder
+# Feature builder (Modified)
 # =========================
-def build_X(df, feature_cols, pathogen_emb):
+def build_X(df, feature_cols, pathogen_emb, name2taxid, warn_tag="", log_func=None):
+    if log_func is None:
+        log_func = lambda x: None
+
     seq_feat = df[feature_cols].values.astype(np.float32)
+    path_dim = next(iter(pathogen_emb.values())).numel()
+
     path_feat = []
-    for p in df["pathogen"]:
-        emb = pathogen_emb[p]
+    missing_map = set()
+    missing_emb = set()
+
+    for p in df["pathogen"].astype(str).str.strip():
+        taxid = name2taxid.get(p)
+        emb = None
+        if taxid is not None:
+            emb = pathogen_emb.get(taxid)
+            if emb is None:
+                missing_emb.add((p, taxid))
+        else:
+            missing_map.add(p)
+
+        if emb is None:
+            emb = torch.zeros(path_dim, dtype=torch.float32)
+
         if isinstance(emb, torch.Tensor):
             emb = emb.detach().cpu().view(-1).numpy()
-        path_feat.append(emb.astype(np.float32))
+        path_feat.append(np.asarray(emb, dtype=np.float32).reshape(-1))
+
+    if missing_map:
+        log_func(f"  [Warn{(' ' + warn_tag) if warn_tag else ''}] "
+                 f"{len(missing_map)} 个 pathogen 名字未在 taxonomy JSON 中找到（零向量兜底）: "
+                 f"{sorted(missing_map)[:10]}{' ...' if len(missing_map) > 10 else ''}")
+    if missing_emb:
+        log_func(f"  [Warn{(' ' + warn_tag) if warn_tag else ''}] "
+                 f"{len(missing_emb)} 个 taxid 未在 {os.path.basename(PATH_EMB_PATH)} 中找到（零向量兜底）: "
+                 f"{sorted(list(missing_emb))[:10]}{' ...' if len(missing_emb) > 10 else ''}")
+
     return np.concatenate([seq_feat, np.asarray(path_feat)], axis=1)
 
 # =========================
@@ -258,7 +306,10 @@ def grid_search_com1():
     y_test = (np.log1p(y_test_raw) - y_mean) / y_std
 
     feature_cols = [c for c in train_df.columns if c.startswith("ESM_")]
-    pathogen_emb = torch.load(PATH_EMB_PATH)
+    
+    pathogen_emb = torch.load(PATH_EMB_PATH, map_location="cpu")
+    name2taxid = load_name2taxid(TAXONOMY_JSON_PATH)
+    grid_log(f"[Taxonomy] 载入 name->taxid: {len(name2taxid)} 条")
     
     all_pathogens = pd.concat([
         train_df["pathogen"], val_df["pathogen"], test_df["pathogen"]
@@ -269,11 +320,12 @@ def grid_search_com1():
     path_dim = next(iter(pathogen_emb.values())).numel()
     
     for df in [train_df, val_df, test_df]:
+        df["pathogen"] = df["pathogen"].astype(str).str.strip()
         df["pid"] = df["pathogen"].map(pathogen2id)
     
-    X_train = build_X(train_df, feature_cols, pathogen_emb)
-    X_val = build_X(val_df, feature_cols, pathogen_emb)
-    X_test = build_X(test_df, feature_cols, pathogen_emb)
+    X_train = build_X(train_df, feature_cols, pathogen_emb, name2taxid, warn_tag="com1-train", log_func=grid_log)
+    X_val = build_X(val_df, feature_cols, pathogen_emb, name2taxid, warn_tag="com1-val", log_func=grid_log)
+    X_test = build_X(test_df, feature_cols, pathogen_emb, name2taxid, warn_tag="com1-test", log_func=grid_log)
 
     param_grid = {
         "hidden_dim": [1024, 512, 256],
@@ -392,7 +444,10 @@ def train_evaluate_com(com_num, best_params, log_func):
     log_func(f"Normalization: mean={y_mean:.6f}, std={y_std:.6f}")
 
     feature_cols = [c for c in train_df.columns if c.startswith("ESM_")]
-    pathogen_emb = torch.load(PATH_EMB_PATH)
+    
+    pathogen_emb = torch.load(PATH_EMB_PATH, map_location="cpu")
+    name2taxid = load_name2taxid(TAXONOMY_JSON_PATH)
+    log_func(f"[Taxonomy] 载入 name->taxid: {len(name2taxid)} 条")
     
     all_pathogens = pd.concat([
         train_df["pathogen"], val_df["pathogen"], test_df["pathogen"]
@@ -403,11 +458,12 @@ def train_evaluate_com(com_num, best_params, log_func):
     path_dim = next(iter(pathogen_emb.values())).numel()
     
     for df in [train_df, val_df, test_df]:
+        df["pathogen"] = df["pathogen"].astype(str).str.strip()
         df["pid"] = df["pathogen"].map(pathogen2id)
     
-    X_train = build_X(train_df, feature_cols, pathogen_emb)
-    X_val = build_X(val_df, feature_cols, pathogen_emb)
-    X_test = build_X(test_df, feature_cols, pathogen_emb)
+    X_train = build_X(train_df, feature_cols, pathogen_emb, name2taxid, warn_tag=f"com{com_num}-train", log_func=log_func)
+    X_val = build_X(val_df, feature_cols, pathogen_emb, name2taxid, warn_tag=f"com{com_num}-val", log_func=log_func)
+    X_test = build_X(test_df, feature_cols, pathogen_emb, name2taxid, warn_tag=f"com{com_num}-test", log_func=log_func)
     
     log_func(f"X_train shape: {X_train.shape}")
     log_func(f"X_val shape: {X_val.shape}")
