@@ -35,7 +35,7 @@ PATH_EMB_PATH = "../pathogen_embeddings.pt"
 TAXONOMY_JSON_PATH = "../pathogen_taxonomy_by_taxid.json"
 
 COM1_PATH = "./data/com1/"
-BASE_DATA_PATH = "./data/com{}"
+BASE_DATA_PATH = "./data/com_{}"
 COMS = [1, 2, 3, 4, 5]
 
 OUT_DIR = "./results"
