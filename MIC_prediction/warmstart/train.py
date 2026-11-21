@@ -24,15 +24,15 @@ SEED = 1
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 MAX_EPOCHS = 500
 PATIENCE = 30
-PATH_EMB_PATH = "../pathogen_embeddings.pt"
+PATH_EMB_PATH = "MIC_pridiction/pathogen_embeddings.pt"
 
-TAXONOMY_JSON_PATH = "../pathogen_taxonomy_by_taxid.json"
+TAXONOMY_JSON_PATH = "MIC_pridiction/pathogen_taxonomy_by_taxid.json"
 
 OUT_DIR = "./results_gridsearch"
 os.makedirs(OUT_DIR, exist_ok=True)
 LOG_FILE = os.path.join(OUT_DIR, "grid_search.log")
 
-INDEPENDENT_TEST_PATH = "/root/autodl-tmp/QMAP_warmstart/split_data/test.csv"
+INDEPENDENT_TEST_PATH = "MIC_pridiction/warmstart/split_data/test.csv"
 
 # 网格搜索阶段可以单独设一个更短的 epoch 上限（可选）
 GS_MAX_EPOCHS = 300
