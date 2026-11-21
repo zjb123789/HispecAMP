@@ -30,7 +30,7 @@ SEED = 1
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 MAX_EPOCHS = 500
 PATIENCE = 30
-PATH_EMB_PATH = "../54_species_embeddings.pt"
+PATH_EMB_PATH = "../pathogen_embeddings.pt"
 
 COM1_PATH = "./data/com1/"
 BASE_DATA_PATH = "./data/com{}"
