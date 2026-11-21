@@ -34,7 +34,7 @@ PATH_EMB_PATH = "../pathogen_embeddings.pt"
 
 TAXONOMY_JSON_PATH = "../pathogen_taxonomy_by_taxid.json"
 
-BASE_DATA_PATH = "./data/com{}"
+BASE_DATA_PATH = "./data/com_{}"
 COMS = [1, 2, 3, 4, 5]
 
 OUT_DIR = "./results"
@@ -53,7 +53,7 @@ BEST_MAPPING_PATH = os.path.join(BEST_MODEL_DIR, "pathogen_mapping.json")
 
 TRAIN_OUT_DIR = os.path.join(OUT_DIR, "train_all_coms")
 os.makedirs(TRAIN_OUT_DIR, exist_ok=True)
-TRAIN_LOG_FILE = os.path.join(TRAIN_OUT_DIR, "training_all_coms.log")
+TRAIN_LOG_FILE = os.path.join(TRAIN_OUT_DIR, "training_all_s.log")
 
 # =========================
 # Logger
