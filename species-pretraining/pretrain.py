@@ -21,10 +21,6 @@ from transformers import AutoTokenizer, AutoModel, AdamW, get_linear_schedule_wi
 from tqdm import tqdm
 from safetensors.torch import save_file
 
-# =========================================================
-# reproducibility   <<< 新增
-# =========================================================
-
 SEED = 42
 random.seed(SEED)
 np.random.seed(SEED)
@@ -42,19 +38,12 @@ print(f"[Reproducibility] SEED = {SEED}")
 # =========================================================
 
 JSON_PATH = "pretraining_data/lineage_ranked.json"
-
 MODEL_NAME = "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract"
-
 BATCH_SIZE = 32
-
 EPOCHS = 15
-
 LR = 5e-6
-
 MAX_LEN = 128
-
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
 OUTPUT_DIR = "./taxonomy_encoder"
 
 # =========================================================
