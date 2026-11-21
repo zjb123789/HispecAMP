@@ -1,0 +1,4776 @@
+{
+  "52694": {
+    "taxid": "52694",
+    "scientific_name": "Acetobacterium wieringae",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Clostridia",
+      "order": "Eubacteriales",
+      "family": "Eubacteriaceae",
+      "genus": "Acetobacterium"
+    }
+  },
+  "2148": {
+    "taxid": "2148",
+    "scientific_name": "Acholeplasma laidlawii",
+    "ranks": {
+      "phylum": "Mycoplasmatota",
+      "class": "Mollicutes",
+      "order": "Acholeplasmatales",
+      "family": "Acholeplasmataceae",
+      "genus": "Acholeplasma"
+    }
+  },
+  "1389932": {
+    "taxid": "1389932",
+    "scientific_name": "Achromobacter pulmonis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Alcaligenaceae",
+      "genus": "Achromobacter"
+    }
+  },
+  "85698": {
+    "taxid": "85698",
+    "scientific_name": "Achromobacter xylosoxidans",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Alcaligenaceae",
+      "genus": "Achromobacter"
+    }
+  },
+  "1748": {
+    "taxid": "1748",
+    "scientific_name": "Acidipropionibacterium acidipropionici",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Propionibacteriales",
+      "family": "Propionibacteriaceae",
+      "genus": "Acidipropionibacterium"
+    }
+  },
+  "1749": {
+    "taxid": "1749",
+    "scientific_name": "Acidipropionibacterium jensenii",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Propionibacteriales",
+      "family": "Propionibacteriaceae",
+      "genus": "Acidipropionibacterium"
+    }
+  },
+  "1751": {
+    "taxid": "1751",
+    "scientific_name": "Acidipropionibacterium thoenii",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Propionibacteriales",
+      "family": "Propionibacteriaceae",
+      "genus": "Acidipropionibacterium"
+    }
+  },
+  "40215": {
+    "taxid": "40215",
+    "scientific_name": "Acinetobacter junii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Acinetobacter"
+    }
+  },
+  "470": {
+    "taxid": "470",
+    "scientific_name": "Acinetobacter baumannii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Acinetobacter"
+    }
+  },
+  "202950": {
+    "taxid": "202950",
+    "scientific_name": "Acinetobacter baylyi",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Acinetobacter"
+    }
+  },
+  "1435036": {
+    "taxid": "1435036",
+    "scientific_name": "Acinetobacter bohemicus",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Acinetobacter"
+    }
+  },
+  "471": {
+    "taxid": "471",
+    "scientific_name": "Acinetobacter calcoaceticus",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Acinetobacter"
+    }
+  },
+  "346222": {
+    "taxid": "346222",
+    "scientific_name": "Acinetobacter sp. DSM 11652",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Acinetobacter"
+    }
+  },
+  "40214": {
+    "taxid": "40214",
+    "scientific_name": "Acinetobacter johnsonii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Acinetobacter"
+    }
+  },
+  "28090": {
+    "taxid": "28090",
+    "scientific_name": "Acinetobacter lwoffii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Acinetobacter"
+    }
+  },
+  "48296": {
+    "taxid": "48296",
+    "scientific_name": "Acinetobacter pittii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Acinetobacter"
+    }
+  },
+  "472": {
+    "taxid": "472",
+    "scientific_name": "Acinetobacter sp.",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Acinetobacter"
+    }
+  },
+  "715": {
+    "taxid": "715",
+    "scientific_name": "Actinobacillus pleuropneumoniae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pasteurellales",
+      "family": "Pasteurellaceae",
+      "genus": "Actinobacillus"
+    }
+  },
+  "59505": {
+    "taxid": "59505",
+    "scientific_name": "Actinotignum schaalii",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Actinomycetales",
+      "family": "Actinomycetaceae",
+      "genus": "Actinotignum"
+    }
+  },
+  "1659": {
+    "taxid": "1659",
+    "scientific_name": "Actinomyces israelii",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Actinomycetales",
+      "family": "Actinomycetaceae",
+      "genus": "Actinomyces"
+    }
+  },
+  "1655": {
+    "taxid": "1655",
+    "scientific_name": "Actinomyces naeslundii",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Actinomycetales",
+      "family": "Actinomycetaceae",
+      "genus": "Actinomyces"
+    }
+  },
+  "1656": {
+    "taxid": "1656",
+    "scientific_name": "Actinomyces viscosus",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Actinomycetales",
+      "family": "Actinomycetaceae",
+      "genus": "Actinomyces"
+    }
+  },
+  "1377": {
+    "taxid": "1377",
+    "scientific_name": "Aerococcus viridans",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Aerococcaceae",
+      "genus": "Aerococcus"
+    }
+  },
+  "105751": {
+    "taxid": "105751",
+    "scientific_name": "Aeromonas bestiarum",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Aeromonadales",
+      "family": "Aeromonadaceae",
+      "genus": "Aeromonas"
+    }
+  },
+  "648": {
+    "taxid": "648",
+    "scientific_name": "Aeromonas caviae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Aeromonadales",
+      "family": "Aeromonadaceae",
+      "genus": "Aeromonas"
+    }
+  },
+  "644": {
+    "taxid": "644",
+    "scientific_name": "Aeromonas hydrophila",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Aeromonadales",
+      "family": "Aeromonadaceae",
+      "genus": "Aeromonas"
+    }
+  },
+  "1917144": {
+    "taxid": "1917144",
+    "scientific_name": "Aeromonas intestinalis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Aeromonadales",
+      "family": "Aeromonadaceae",
+      "genus": "Aeromonas"
+    }
+  },
+  "645": {
+    "taxid": "645",
+    "scientific_name": "Aeromonas salmonicida",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Aeromonadales",
+      "family": "Aeromonadaceae",
+      "genus": "Aeromonas"
+    }
+  },
+  "646": {
+    "taxid": "646",
+    "scientific_name": "Aeromonas sobria",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Aeromonadales",
+      "family": "Aeromonadaceae",
+      "genus": "Aeromonas"
+    }
+  },
+  "654": {
+    "taxid": "654",
+    "scientific_name": "Aeromonas veronii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Aeromonadales",
+      "family": "Aeromonadaceae",
+      "genus": "Aeromonas"
+    }
+  },
+  "714": {
+    "taxid": "714",
+    "scientific_name": "Aggregatibacter actinomycetemcomitans",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pasteurellales",
+      "family": "Pasteurellaceae",
+      "genus": "Aggregatibacter"
+    }
+  },
+  "358": {
+    "taxid": "358",
+    "scientific_name": "Agrobacterium tumefaciens",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Alphaproteobacteria",
+      "order": "Hyphomicrobiales",
+      "family": "Rhizobiaceae",
+      "genus": "Agrobacterium"
+    }
+  },
+  "373": {
+    "taxid": "373",
+    "scientific_name": "Gillisella vitis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Alphaproteobacteria",
+      "order": "Hyphomicrobiales",
+      "family": "Rhizobiaceae",
+      "genus": "Gillisella"
+    }
+  },
+  "239935": {
+    "taxid": "239935",
+    "scientific_name": "Akkermansia muciniphila",
+    "ranks": {
+      "phylum": "Verrucomicrobiota",
+      "class": "Verrucomicrobiia",
+      "order": "Verrucomicrobiales",
+      "family": "Akkermansiaceae",
+      "genus": "Akkermansia"
+    }
+  },
+  "511": {
+    "taxid": "511",
+    "scientific_name": "Alcaligenes faecalis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Alcaligenaceae",
+      "genus": "Alcaligenes"
+    }
+  },
+  "1450": {
+    "taxid": "1450",
+    "scientific_name": "Alicyclobacillus acidoterrestris",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Alicyclobacillaceae",
+      "genus": "Alicyclobacillus"
+    }
+  },
+  "668": {
+    "taxid": "668",
+    "scientific_name": "Aliivibrio fischeri",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Aliivibrio"
+    }
+  },
+  "688": {
+    "taxid": "688",
+    "scientific_name": "Aliivibrio logei",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Aliivibrio"
+    }
+  },
+  "40269": {
+    "taxid": "40269",
+    "scientific_name": "Aliivibrio salmonicida",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Aliivibrio"
+    }
+  },
+  "1445": {
+    "taxid": "1445",
+    "scientific_name": "Alkalihalobacillus alcalophilus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Alkalihalobacillus"
+    }
+  },
+  "79880": {
+    "taxid": "79880",
+    "scientific_name": "Shouchella clausii",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Shouchella"
+    }
+  },
+  "86665": {
+    "taxid": "86665",
+    "scientific_name": "Halalkalibacterium halodurans",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Halalkalibacterium (ex Joshi et al. 2022)"
+    }
+  },
+  "1665": {
+    "taxid": "1665",
+    "scientific_name": "Arthrobacter globiformis",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Micrococcales",
+      "family": "Micrococcaceae",
+      "genus": "Arthrobacter"
+    }
+  },
+  "1667": {
+    "taxid": "1667",
+    "scientific_name": "Arthrobacter sp.",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Micrococcales",
+      "family": "Micrococcaceae",
+      "genus": "Arthrobacter"
+    }
+  },
+  "751": {
+    "taxid": "751",
+    "scientific_name": "Avibacterium avium",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pasteurellales",
+      "family": "Pasteurellaceae",
+      "genus": "Avibacterium"
+    }
+  },
+  "354": {
+    "taxid": "354",
+    "scientific_name": "Azotobacter vinelandii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Azotobacter"
+    }
+  },
+  "225844": {
+    "taxid": "225844",
+    "scientific_name": "Guptibacillus algicola",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Guptibacillaceae",
+      "genus": "Guptibacillus"
+    }
+  },
+  "1390": {
+    "taxid": "1390",
+    "scientific_name": "Bacillus amyloliquefaciens",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Bacillus"
+    }
+  },
+  "1392": {
+    "taxid": "1392",
+    "scientific_name": "Bacillus anthracis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Bacillus"
+    }
+  },
+  "1452": {
+    "taxid": "1452",
+    "scientific_name": "Bacillus atrophaeus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Bacillus"
+    }
+  },
+  "1396": {
+    "taxid": "1396",
+    "scientific_name": "Bacillus cereus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Bacillus"
+    }
+  },
+  "1398": {
+    "taxid": "1398",
+    "scientific_name": "Heyndrickxia coagulans",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Heyndrickxia"
+    }
+  },
+  "1402": {
+    "taxid": "1402",
+    "scientific_name": "Bacillus licheniformis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Bacillus"
+    }
+  },
+  "1799160": {
+    "taxid": "1799160",
+    "scientific_name": "Bacillus magaterium",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Bacillus"
+    }
+  },
+  "1404": {
+    "taxid": "1404",
+    "scientific_name": "Priestia megaterium",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Priestia"
+    }
+  },
+  "1405": {
+    "taxid": "1405",
+    "scientific_name": "Bacillus mycoides",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Bacillus"
+    }
+  },
+  "1408": {
+    "taxid": "1408",
+    "scientific_name": "Bacillus pumilus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Bacillus"
+    }
+  },
+  "1478": {
+    "taxid": "1478",
+    "scientific_name": "Peribacillus simplex",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Peribacillus"
+    }
+  },
+  "1409": {
+    "taxid": "1409",
+    "scientific_name": "Bacillus sp. (in: firmicutes)",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Bacillus"
+    }
+  },
+  "1423": {
+    "taxid": "1423",
+    "scientific_name": "Bacillus subtilis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Bacillus"
+    }
+  },
+  "1428": {
+    "taxid": "1428",
+    "scientific_name": "Bacillus thuringiensis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Bacillus"
+    }
+  },
+  "28111": {
+    "taxid": "28111",
+    "scientific_name": "Bacteroides eggerthii",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Bacteroidia",
+      "order": "Bacteroidales",
+      "family": "Bacteroidaceae",
+      "genus": "Bacteroides"
+    }
+  },
+  "817": {
+    "taxid": "817",
+    "scientific_name": "Bacteroides fragilis",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Bacteroidia",
+      "order": "Bacteroidales",
+      "family": "Bacteroidaceae",
+      "genus": "Bacteroides"
+    }
+  },
+  "28116": {
+    "taxid": "28116",
+    "scientific_name": "Bacteroides ovatus",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Bacteroidia",
+      "order": "Bacteroidales",
+      "family": "Bacteroidaceae",
+      "genus": "Bacteroides"
+    }
+  },
+  "29523": {
+    "taxid": "29523",
+    "scientific_name": "Bacteroides sp.",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Bacteroidia",
+      "order": "Bacteroidales",
+      "family": "Bacteroidaceae",
+      "genus": "Bacteroides"
+    }
+  },
+  "818": {
+    "taxid": "818",
+    "scientific_name": "Bacteroides thetaiotaomicron",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Bacteroidia",
+      "order": "Bacteroidales",
+      "family": "Bacteroidaceae",
+      "genus": "Bacteroides"
+    }
+  },
+  "820": {
+    "taxid": "820",
+    "scientific_name": "Bacteroides uniformis",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Bacteroidia",
+      "order": "Bacteroidales",
+      "family": "Bacteroidaceae",
+      "genus": "Bacteroides"
+    }
+  },
+  "47735": {
+    "taxid": "47735",
+    "scientific_name": "Bibersteinia trehalosi",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pasteurellales",
+      "family": "Pasteurellaceae",
+      "genus": "Bibersteinia"
+    }
+  },
+  "1680": {
+    "taxid": "1680",
+    "scientific_name": "Bifidobacterium adolescentis",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Bifidobacteriales",
+      "family": "Bifidobacteriaceae",
+      "genus": "Bifidobacterium"
+    }
+  },
+  "1685": {
+    "taxid": "1685",
+    "scientific_name": "Bifidobacterium breve",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Bifidobacteriales",
+      "family": "Bifidobacteriaceae",
+      "genus": "Bifidobacterium"
+    }
+  },
+  "216816": {
+    "taxid": "216816",
+    "scientific_name": "Bifidobacterium longum",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Bifidobacteriales",
+      "family": "Bifidobacteriaceae",
+      "genus": "Bifidobacterium"
+    }
+  },
+  "40520": {
+    "taxid": "40520",
+    "scientific_name": "Blautia obeum",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Clostridia",
+      "order": "Lachnospirales",
+      "family": "Lachnospiraceae",
+      "genus": "Blautia"
+    }
+  },
+  "518": {
+    "taxid": "518",
+    "scientific_name": "Bordetella bronchiseptica",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Alcaligenaceae",
+      "genus": "Bordetella"
+    }
+  },
+  "520": {
+    "taxid": "520",
+    "scientific_name": "Bordetella pertussis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Alcaligenaceae",
+      "genus": "Bordetella"
+    }
+  },
+  "55210": {
+    "taxid": "55210",
+    "scientific_name": "Brenneria nigrifluens",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Pectobacteriaceae",
+      "genus": "Brenneria"
+    }
+  },
+  "55214": {
+    "taxid": "55214",
+    "scientific_name": "Brenneria salicis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Pectobacteriaceae",
+      "genus": "Brenneria"
+    }
+  },
+  "2756": {
+    "taxid": "2756",
+    "scientific_name": "Brochothrix thermosphacta",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Listeriaceae",
+      "genus": "Brochothrix"
+    }
+  },
+  "235": {
+    "taxid": "235",
+    "scientific_name": "Brucella abortus",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Alphaproteobacteria",
+      "order": "Hyphomicrobiales",
+      "family": "Brucellaceae",
+      "genus": "Brucella"
+    }
+  },
+  "95486": {
+    "taxid": "95486",
+    "scientific_name": "Burkholderia cenocepacia",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Burkholderiaceae",
+      "genus": "Burkholderia"
+    }
+  },
+  "292": {
+    "taxid": "292",
+    "scientific_name": "Burkholderia cepacia",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Burkholderiaceae",
+      "genus": "Burkholderia"
+    }
+  },
+  "13373": {
+    "taxid": "13373",
+    "scientific_name": "Burkholderia mallei",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Burkholderiaceae",
+      "genus": "Burkholderia"
+    }
+  },
+  "87883": {
+    "taxid": "87883",
+    "scientific_name": "Burkholderia multivorans",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Burkholderiaceae",
+      "genus": "Burkholderia"
+    }
+  },
+  "95485": {
+    "taxid": "95485",
+    "scientific_name": "Burkholderia stabilis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Burkholderiaceae",
+      "genus": "Burkholderia"
+    }
+  },
+  "57975": {
+    "taxid": "57975",
+    "scientific_name": "Burkholderia thailandensis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Burkholderiaceae",
+      "genus": "Burkholderia"
+    }
+  },
+  "101571": {
+    "taxid": "101571",
+    "scientific_name": "Burkholderia ubonensis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Burkholderiaceae",
+      "genus": "Burkholderia"
+    }
+  },
+  "60552": {
+    "taxid": "60552",
+    "scientific_name": "Burkholderia vietnamiensis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Burkholderiaceae",
+      "genus": "Burkholderia"
+    }
+  },
+  "195": {
+    "taxid": "195",
+    "scientific_name": "Campylobacter coli",
+    "ranks": {
+      "phylum": "Campylobacterota",
+      "class": "Epsilonproteobacteria",
+      "order": "Campylobacterales",
+      "family": "Campylobacteraceae",
+      "genus": "Campylobacter"
+    }
+  },
+  "197": {
+    "taxid": "197",
+    "scientific_name": "Campylobacter jejuni",
+    "ranks": {
+      "phylum": "Campylobacterota",
+      "class": "Epsilonproteobacteria",
+      "order": "Campylobacterales",
+      "family": "Campylobacteraceae",
+      "genus": "Campylobacter"
+    }
+  },
+  "201": {
+    "taxid": "201",
+    "scientific_name": "Campylobacter lari",
+    "ranks": {
+      "phylum": "Campylobacterota",
+      "class": "Epsilonproteobacteria",
+      "order": "Campylobacterales",
+      "family": "Campylobacteraceae",
+      "genus": "Campylobacter"
+    }
+  },
+  "2748": {
+    "taxid": "2748",
+    "scientific_name": "Carnobacterium divergens",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Carnobacteriaceae",
+      "genus": "Carnobacterium"
+    }
+  },
+  "2752": {
+    "taxid": "2752",
+    "scientific_name": "Carnobacterium funditum",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Carnobacteriaceae",
+      "genus": "Carnobacterium"
+    }
+  },
+  "2749": {
+    "taxid": "2749",
+    "scientific_name": "Carnobacterium gallinarum",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Carnobacteriaceae",
+      "genus": "Carnobacterium"
+    }
+  },
+  "2751": {
+    "taxid": "2751",
+    "scientific_name": "Carnobacterium maltaromaticum",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Carnobacteriaceae",
+      "genus": "Carnobacterium"
+    }
+  },
+  "2750": {
+    "taxid": "2750",
+    "scientific_name": "Carnobacterium mobile",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Carnobacteriaceae",
+      "genus": "Carnobacterium"
+    }
+  },
+  "536": {
+    "taxid": "536",
+    "scientific_name": "Chromobacterium violaceum",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Neisseriales",
+      "family": "Chromobacteriaceae",
+      "genus": "Chromobacterium"
+    }
+  },
+  "35703": {
+    "taxid": "35703",
+    "scientific_name": "Citrobacter amalonaticus",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Citrobacter"
+    }
+  },
+  "546": {
+    "taxid": "546",
+    "scientific_name": "Citrobacter freundii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Citrobacter"
+    }
+  },
+  "545": {
+    "taxid": "545",
+    "scientific_name": "Citrobacter koseri",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Citrobacter"
+    }
+  },
+  "1896336": {
+    "taxid": "1896336",
+    "scientific_name": "Citrobacter sp.",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Citrobacter"
+    }
+  },
+  "28447": {
+    "taxid": "28447",
+    "scientific_name": "Clavibacter michiganensis",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Micrococcales",
+      "family": "Microbacteriaceae",
+      "genus": "Clavibacter"
+    }
+  },
+  "1496": {
+    "taxid": "1496",
+    "scientific_name": "Clostridioides difficile",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Clostridia",
+      "order": "Peptostreptococcales",
+      "family": "Peptostreptococcaceae",
+      "genus": "Clostridioides"
+    }
+  },
+  "1492": {
+    "taxid": "1492",
+    "scientific_name": "Clostridium butyricum",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Clostridia",
+      "order": "Eubacteriales",
+      "family": "Clostridiaceae",
+      "genus": "Clostridium"
+    }
+  },
+  "1501": {
+    "taxid": "1501",
+    "scientific_name": "Clostridium pasteurianum",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Clostridia",
+      "order": "Eubacteriales",
+      "family": "Clostridiaceae",
+      "genus": "Clostridium"
+    }
+  },
+  "1502": {
+    "taxid": "1502",
+    "scientific_name": "Clostridium perfringens",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Clostridia",
+      "order": "Eubacteriales",
+      "family": "Clostridiaceae",
+      "genus": "Clostridium"
+    }
+  },
+  "29347": {
+    "taxid": "29347",
+    "scientific_name": "[Clostridium] scindens",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Clostridia",
+      "order": "Lachnospirales",
+      "family": "Lachnospiraceae",
+      "genus": "Lachnoclostridium"
+    }
+  },
+  "1504": {
+    "taxid": "1504",
+    "scientific_name": "Clostridium septicum",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Clostridia",
+      "order": "Eubacteriales",
+      "family": "Clostridiaceae",
+      "genus": "Clostridium"
+    }
+  },
+  "29348": {
+    "taxid": "29348",
+    "scientific_name": "Thomasclavelia spiroformis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Erysipelotrichia",
+      "order": "Erysipelotrichales",
+      "family": "Coprobacillaceae",
+      "genus": "Thomasclavelia"
+    }
+  },
+  "1509": {
+    "taxid": "1509",
+    "scientific_name": "Clostridium sporogenes",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Clostridia",
+      "order": "Eubacteriales",
+      "family": "Clostridiaceae",
+      "genus": "Clostridium"
+    }
+  },
+  "1559": {
+    "taxid": "1559",
+    "scientific_name": "Clostridium tertium",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Clostridia",
+      "order": "Eubacteriales",
+      "family": "Clostridiaceae",
+      "genus": "Clostridium"
+    }
+  },
+  "1519": {
+    "taxid": "1519",
+    "scientific_name": "Clostridium tyrobutyricum",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Clostridia",
+      "order": "Eubacteriales",
+      "family": "Clostridiaceae",
+      "genus": "Clostridium"
+    }
+  },
+  "74426": {
+    "taxid": "74426",
+    "scientific_name": "Collinsella aerofaciens",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Coriobacteriia",
+      "order": "Coriobacteriales",
+      "family": "Coriobacteriaceae",
+      "genus": "Collinsella"
+    }
+  },
+  "36808": {
+    "taxid": "36808",
+    "scientific_name": "Corynebacterium bovis",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Corynebacteriaceae",
+      "genus": "Corynebacterium"
+    }
+  },
+  "1717": {
+    "taxid": "1717",
+    "scientific_name": "Corynebacterium diphtheriae",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Corynebacteriaceae",
+      "genus": "Corynebacterium"
+    }
+  },
+  "1718": {
+    "taxid": "1718",
+    "scientific_name": "Corynebacterium glutamicum",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Corynebacteriaceae",
+      "genus": "Corynebacterium"
+    }
+  },
+  "38289": {
+    "taxid": "38289",
+    "scientific_name": "Corynebacterium jeikeium",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Corynebacteriaceae",
+      "genus": "Corynebacterium"
+    }
+  },
+  "1719": {
+    "taxid": "1719",
+    "scientific_name": "Corynebacterium pseudotuberculosis",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Corynebacteriaceae",
+      "genus": "Corynebacterium"
+    }
+  },
+  "1724": {
+    "taxid": "1724",
+    "scientific_name": "Corynebacterium renale",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Corynebacteriaceae",
+      "genus": "Corynebacterium"
+    }
+  },
+  "146827": {
+    "taxid": "146827",
+    "scientific_name": "Corynebacterium simulans",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Corynebacteriaceae",
+      "genus": "Corynebacterium"
+    }
+  },
+  "1720": {
+    "taxid": "1720",
+    "scientific_name": "Corynebacterium sp.",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Corynebacteriaceae",
+      "genus": "Corynebacterium"
+    }
+  },
+  "185761": {
+    "taxid": "185761",
+    "scientific_name": "Corynebacterium spheniscorum",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Corynebacteriaceae",
+      "genus": "Corynebacterium"
+    }
+  },
+  "1705": {
+    "taxid": "1705",
+    "scientific_name": "Corynebacterium stationis",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Corynebacteriaceae",
+      "genus": "Corynebacterium"
+    }
+  },
+  "43770": {
+    "taxid": "43770",
+    "scientific_name": "Corynebacterium striatum",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Corynebacteriaceae",
+      "genus": "Corynebacterium"
+    }
+  },
+  "1725": {
+    "taxid": "1725",
+    "scientific_name": "Corynebacterium xerosis",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Corynebacteriaceae",
+      "genus": "Corynebacterium"
+    }
+  },
+  "28141": {
+    "taxid": "28141",
+    "scientific_name": "Cronobacter sakazakii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Cronobacter"
+    }
+  },
+  "106590": {
+    "taxid": "106590",
+    "scientific_name": "Cupriavidus necator",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Burkholderiaceae",
+      "genus": "Cupriavidus"
+    }
+  },
+  "1747": {
+    "taxid": "1747",
+    "scientific_name": "Cutibacterium acnes",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Propionibacteriales",
+      "family": "Propionibacteriaceae",
+      "genus": "Cutibacterium"
+    }
+  },
+  "991": {
+    "taxid": "991",
+    "scientific_name": "Flavobacterium hydatis",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Flavobacteriia",
+      "order": "Flavobacteriales",
+      "family": "Flavobacteriaceae",
+      "genus": "Flavobacterium"
+    }
+  },
+  "63186": {
+    "taxid": "63186",
+    "scientific_name": "Zobellia galactanivorans",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Flavobacteriia",
+      "order": "Flavobacteriales",
+      "family": "Flavobacteriaceae",
+      "genus": "Zobellia"
+    }
+  },
+  "80866": {
+    "taxid": "80866",
+    "scientific_name": "Delftia acidovorans",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Comamonadaceae",
+      "genus": "Delftia"
+    }
+  },
+  "1274": {
+    "taxid": "1274",
+    "scientific_name": "Dermacoccus nishinomiyaensis",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Micrococcales",
+      "family": "Dermacoccaceae",
+      "genus": "Dermacoccus"
+    }
+  },
+  "204038": {
+    "taxid": "204038",
+    "scientific_name": "Dickeya dadantii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Pectobacteriaceae",
+      "genus": "Dickeya"
+    }
+  },
+  "204042": {
+    "taxid": "204042",
+    "scientific_name": "Dickeya zeae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Pectobacteriaceae",
+      "genus": "Dickeya"
+    }
+  },
+  "67780": {
+    "taxid": "67780",
+    "scientific_name": "Edwardsiella ictaluri",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Hafniaceae",
+      "genus": "Edwardsiella"
+    }
+  },
+  "1263550": {
+    "taxid": "1263550",
+    "scientific_name": "Edwardsiella piscicida",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Hafniaceae",
+      "genus": "Edwardsiella"
+    }
+  },
+  "636": {
+    "taxid": "636",
+    "scientific_name": "Edwardsiella tarda",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Hafniaceae",
+      "genus": "Edwardsiella"
+    }
+  },
+  "238": {
+    "taxid": "238",
+    "scientific_name": "Elizabethkingia meningoseptica",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Flavobacteriia",
+      "order": "Flavobacteriales",
+      "family": "Weeksellaceae",
+      "genus": "Elizabethkingia"
+    }
+  },
+  "61645": {
+    "taxid": "61645",
+    "scientific_name": "Enterobacter asburiae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Enterobacter"
+    }
+  },
+  "550": {
+    "taxid": "550",
+    "scientific_name": "Enterobacter cloacae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Enterobacter"
+    }
+  },
+  "158836": {
+    "taxid": "158836",
+    "scientific_name": "Enterobacter hormaechei",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Enterobacter"
+    }
+  },
+  "208224": {
+    "taxid": "208224",
+    "scientific_name": "Enterobacter kobei",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Enterobacter"
+    }
+  },
+  "299767": {
+    "taxid": "299767",
+    "scientific_name": "Enterobacter ludwigii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Enterobacter"
+    }
+  },
+  "539813": {
+    "taxid": "539813",
+    "scientific_name": "Enterobacter mori",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Enterobacter"
+    }
+  },
+  "69220": {
+    "taxid": "69220",
+    "scientific_name": "Lelliottia nimipressuralis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Lelliottia"
+    }
+  },
+  "42895": {
+    "taxid": "42895",
+    "scientific_name": "Enterobacter sp.",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Enterobacter"
+    }
+  },
+  "33945": {
+    "taxid": "33945",
+    "scientific_name": "Enterococcus avium",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Enterococcaceae",
+      "genus": "Enterococcus"
+    }
+  },
+  "37734": {
+    "taxid": "37734",
+    "scientific_name": "Enterococcus casseliflavus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Enterococcaceae",
+      "genus": "Enterococcus"
+    }
+  },
+  "53345": {
+    "taxid": "53345",
+    "scientific_name": "Enterococcus durans",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Enterococcaceae",
+      "genus": "Enterococcus"
+    }
+  },
+  "1351": {
+    "taxid": "1351",
+    "scientific_name": "Enterococcus faecalis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Enterococcaceae",
+      "genus": "Enterococcus"
+    }
+  },
+  "1352": {
+    "taxid": "1352",
+    "scientific_name": "Enterococcus faecium",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Enterococcaceae",
+      "genus": "Enterococcus"
+    }
+  },
+  "1353": {
+    "taxid": "1353",
+    "scientific_name": "Enterococcus gallinarum",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Enterococcaceae",
+      "genus": "Enterococcus"
+    }
+  },
+  "1354": {
+    "taxid": "1354",
+    "scientific_name": "Enterococcus hirae",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Enterococcaceae",
+      "genus": "Enterococcus"
+    }
+  },
+  "35783": {
+    "taxid": "35783",
+    "scientific_name": "Enterococcus sp.",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Enterococcaceae",
+      "genus": "Enterococcus"
+    }
+  },
+  "552": {
+    "taxid": "552",
+    "scientific_name": "Erwinia amylovora",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Erwiniaceae",
+      "genus": "Erwinia"
+    }
+  },
+  "562": {
+    "taxid": "562",
+    "scientific_name": "Escherichia coli",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Escherichia"
+    }
+  },
+  "996": {
+    "taxid": "996",
+    "scientific_name": "Flavobacterium columnare",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Flavobacteriia",
+      "order": "Flavobacteriales",
+      "family": "Flavobacteriaceae",
+      "genus": "Flavobacterium"
+    }
+  },
+  "96345": {
+    "taxid": "96345",
+    "scientific_name": "Flavobacterium psychrophilum",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Flavobacteriia",
+      "order": "Flavobacteriales",
+      "family": "Flavobacteriaceae",
+      "genus": "Flavobacterium"
+    }
+  },
+  "239": {
+    "taxid": "239",
+    "scientific_name": "Flavobacterium sp.",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Flavobacteriia",
+      "order": "Flavobacteriales",
+      "family": "Flavobacteriaceae",
+      "genus": "Flavobacterium"
+    }
+  },
+  "357240": {
+    "taxid": "357240",
+    "scientific_name": "Franconibacter helveticus",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Franconibacter"
+    }
+  },
+  "851": {
+    "taxid": "851",
+    "scientific_name": "Fusobacterium nucleatum",
+    "ranks": {
+      "phylum": "Fusobacteriota",
+      "class": "Fusobacteriia",
+      "order": "Fusobacteriales",
+      "family": "Fusobacteriaceae",
+      "genus": "Fusobacterium"
+    }
+  },
+  "856": {
+    "taxid": "856",
+    "scientific_name": "Fusobacterium varium",
+    "ranks": {
+      "phylum": "Fusobacteriota",
+      "class": "Fusobacteriia",
+      "order": "Fusobacteriales",
+      "family": "Fusobacteriaceae",
+      "genus": "Fusobacterium"
+    }
+  },
+  "2702": {
+    "taxid": "2702",
+    "scientific_name": "Gardnerella vaginalis",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Bifidobacteriales",
+      "family": "Bifidobacteriaceae",
+      "genus": "Gardnerella"
+    }
+  },
+  "1462": {
+    "taxid": "1462",
+    "scientific_name": "Geobacillus kaustophilus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Anoxybacillaceae",
+      "genus": "Geobacillus"
+    }
+  },
+  "169283": {
+    "taxid": "169283",
+    "scientific_name": "Geobacillus lituanicus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Anoxybacillaceae",
+      "genus": "Geobacillus"
+    }
+  },
+  "1422": {
+    "taxid": "1422",
+    "scientific_name": "Geobacillus stearothermophilus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Anoxybacillaceae",
+      "genus": "Geobacillus"
+    }
+  },
+  "33940": {
+    "taxid": "33940",
+    "scientific_name": "Geobacillus thermodenitrificans",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Anoxybacillaceae",
+      "genus": "Geobacillus"
+    }
+  },
+  "33941": {
+    "taxid": "33941",
+    "scientific_name": "Geobacillus thermoleovorans",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Anoxybacillaceae",
+      "genus": "Geobacillus"
+    }
+  },
+  "738": {
+    "taxid": "738",
+    "scientific_name": "Glaesserella parasuis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pasteurellales",
+      "family": "Pasteurellaceae",
+      "genus": "Glaesserella"
+    }
+  },
+  "1933880": {
+    "taxid": "1933880",
+    "scientific_name": "Glutamicibacter halophytocola",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Micrococcales",
+      "family": "Micrococcaceae",
+      "genus": "Glutamicibacter"
+    }
+  },
+  "727": {
+    "taxid": "727",
+    "scientific_name": "Haemophilus influenzae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pasteurellales",
+      "family": "Pasteurellaceae",
+      "genus": "Haemophilus"
+    }
+  },
+  "730": {
+    "taxid": "730",
+    "scientific_name": "Pseudactinobacillus ducreyi",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pasteurellales",
+      "family": "Pasteurellaceae",
+      "genus": "Pseudactinobacillus"
+    }
+  },
+  "569": {
+    "taxid": "569",
+    "scientific_name": "Hafnia alvei",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Hafniaceae",
+      "genus": "Hafnia"
+    }
+  },
+  "210": {
+    "taxid": "210",
+    "scientific_name": "Helicobacter pylori",
+    "ranks": {
+      "phylum": "Campylobacterota",
+      "class": "Epsilonproteobacteria",
+      "order": "Campylobacterales",
+      "family": "Helicobacteraceae",
+      "genus": "Helicobacter"
+    }
+  },
+  "731": {
+    "taxid": "731",
+    "scientific_name": "Histophilus somni",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pasteurellales",
+      "family": "Pasteurellaceae",
+      "genus": "Histophilus"
+    }
+  },
+  "43674": {
+    "taxid": "43674",
+    "scientific_name": "Jonesia denitrificans",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Micrococcales",
+      "family": "Jonesiaceae",
+      "genus": "Jonesia"
+    }
+  },
+  "58351": {
+    "taxid": "58351",
+    "scientific_name": "Kitasatospora kifunensis",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Kitasatosporales",
+      "family": "Streptomycetaceae",
+      "genus": "Kitasatospora"
+    }
+  },
+  "548": {
+    "taxid": "548",
+    "scientific_name": "Klebsiella aerogenes",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Klebsiella"
+    }
+  },
+  "571": {
+    "taxid": "571",
+    "scientific_name": "Klebsiella oxytoca",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Klebsiella"
+    }
+  },
+  "573": {
+    "taxid": "573",
+    "scientific_name": "Klebsiella pneumoniae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Klebsiella"
+    }
+  },
+  "576": {
+    "taxid": "576",
+    "scientific_name": "Klebsiella sp.",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Klebsiella"
+    }
+  },
+  "580": {
+    "taxid": "580",
+    "scientific_name": "Kluyvera cryocrescens",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Kluyvera"
+    }
+  },
+  "72000": {
+    "taxid": "72000",
+    "scientific_name": "Kocuria rhizophila",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Micrococcales",
+      "family": "Micrococcaceae",
+      "genus": "Kocuria"
+    }
+  },
+  "342954": {
+    "taxid": "342954",
+    "scientific_name": "Lacinutrix algicola",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Flavobacteriia",
+      "order": "Flavobacteriales",
+      "family": "Flavobacteriaceae",
+      "genus": "Lacinutrix"
+    }
+  },
+  "1582": {
+    "taxid": "1582",
+    "scientific_name": "Lacticaseibacillus casei",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Lacticaseibacillus"
+    }
+  },
+  "1597": {
+    "taxid": "1597",
+    "scientific_name": "Lacticaseibacillus paracasei",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Lacticaseibacillus"
+    }
+  },
+  "47715": {
+    "taxid": "47715",
+    "scientific_name": "Lacticaseibacillus rhamnosus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Lacticaseibacillus"
+    }
+  },
+  "1590": {
+    "taxid": "1590",
+    "scientific_name": "Lactiplantibacillus plantarum",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Lactiplantibacillus"
+    }
+  },
+  "1579": {
+    "taxid": "1579",
+    "scientific_name": "Lactobacillus acidophilus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Lactobacillus"
+    }
+  },
+  "47770": {
+    "taxid": "47770",
+    "scientific_name": "Lactobacillus crispatus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Lactobacillus"
+    }
+  },
+  "1584": {
+    "taxid": "1584",
+    "scientific_name": "Lactobacillus delbrueckii",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Lactobacillus"
+    }
+  },
+  "1596": {
+    "taxid": "1596",
+    "scientific_name": "Lactobacillus gasseri",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Lactobacillus"
+    }
+  },
+  "109790": {
+    "taxid": "109790",
+    "scientific_name": "Lactobacillus jensenii",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Lactobacillus"
+    }
+  },
+  "1363": {
+    "taxid": "1363",
+    "scientific_name": "Lactococcus garvieae",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Lactococcus"
+    }
+  },
+  "1358": {
+    "taxid": "1358",
+    "scientific_name": "Lactococcus lactis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Lactococcus"
+    }
+  },
+  "44273": {
+    "taxid": "44273",
+    "scientific_name": "Lactococcus sp.",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Lactococcus"
+    }
+  },
+  "51664": {
+    "taxid": "51664",
+    "scientific_name": "Lapidilactobacillus dextrinicus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Lapidilactobacillus"
+    }
+  },
+  "28038": {
+    "taxid": "28038",
+    "scientific_name": "Latilactobacillus curvatus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Latilactobacillus"
+    }
+  },
+  "1599": {
+    "taxid": "1599",
+    "scientific_name": "Latilactobacillus sakei",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Latilactobacillus"
+    }
+  },
+  "447": {
+    "taxid": "447",
+    "scientific_name": "Legionella bozemanae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Legionellales",
+      "family": "Legionellaceae",
+      "genus": "Legionella"
+    }
+  },
+  "463": {
+    "taxid": "463",
+    "scientific_name": "Fluoribacter dumoffii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Legionellales",
+      "family": "Legionellaceae",
+      "genus": "Fluoribacter"
+    }
+  },
+  "453": {
+    "taxid": "453",
+    "scientific_name": "Legionella feeleii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Legionellales",
+      "family": "Legionellaceae",
+      "genus": "Legionella"
+    }
+  },
+  "450": {
+    "taxid": "450",
+    "scientific_name": "Legionella longbeachae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Legionellales",
+      "family": "Legionellaceae",
+      "genus": "Legionella"
+    }
+  },
+  "451": {
+    "taxid": "451",
+    "scientific_name": "Legionella micdadei",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Legionellales",
+      "family": "Legionellaceae",
+      "genus": "Legionella"
+    }
+  },
+  "29423": {
+    "taxid": "29423",
+    "scientific_name": "Legionella oakridgensis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Legionellales",
+      "family": "Legionellaceae",
+      "genus": "Legionella"
+    }
+  },
+  "446": {
+    "taxid": "446",
+    "scientific_name": "Legionella pneumophila",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Legionellales",
+      "family": "Legionellaceae",
+      "genus": "Legionella"
+    }
+  },
+  "61646": {
+    "taxid": "61646",
+    "scientific_name": "Lelliottia amnigena",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Lelliottia"
+    }
+  },
+  "1246": {
+    "taxid": "1246",
+    "scientific_name": "Leuconostoc lactis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Leuconostoc"
+    }
+  },
+  "1245": {
+    "taxid": "1245",
+    "scientific_name": "Leuconostoc mesenteroides",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Leuconostoc"
+    }
+  },
+  "45248": {
+    "taxid": "45248",
+    "scientific_name": "Leucothrix mucor",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Thiotrichales",
+      "family": "Thiotrichaceae",
+      "genus": "Leucothrix"
+    }
+  },
+  "1580": {
+    "taxid": "1580",
+    "scientific_name": "Levilactobacillus brevis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Levilactobacillus"
+    }
+  },
+  "1624": {
+    "taxid": "1624",
+    "scientific_name": "Ligilactobacillus salivarius",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Ligilactobacillus"
+    }
+  },
+  "1613": {
+    "taxid": "1613",
+    "scientific_name": "Limosilactobacillus fermentum",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Limosilactobacillus"
+    }
+  },
+  "97478": {
+    "taxid": "97478",
+    "scientific_name": "Limosilactobacillus mucosae",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Limosilactobacillus"
+    }
+  },
+  "1632": {
+    "taxid": "1632",
+    "scientific_name": "Limosilactobacillus oris",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Limosilactobacillus"
+    }
+  },
+  "1069827": {
+    "taxid": "1069827",
+    "scientific_name": "Listeria fleischmannii",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Listeriaceae",
+      "genus": "Listeria"
+    }
+  },
+  "1641": {
+    "taxid": "1641",
+    "scientific_name": "Listeria grayi",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Listeriaceae",
+      "genus": "Listeria"
+    }
+  },
+  "1642": {
+    "taxid": "1642",
+    "scientific_name": "Listeria innocua",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Listeriaceae",
+      "genus": "Listeria"
+    }
+  },
+  "1638": {
+    "taxid": "1638",
+    "scientific_name": "Listeria ivanovii",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Listeriaceae",
+      "genus": "Listeria"
+    }
+  },
+  "1639": {
+    "taxid": "1639",
+    "scientific_name": "Listeria monocytogenes",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Listeriaceae",
+      "genus": "Listeria"
+    }
+  },
+  "1640": {
+    "taxid": "1640",
+    "scientific_name": "Listeria seeligeri",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Listeriaceae",
+      "genus": "Listeria"
+    }
+  },
+  "1643": {
+    "taxid": "1643",
+    "scientific_name": "Listeria welshimeri",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Listeriaceae",
+      "genus": "Listeria"
+    }
+  },
+  "1610": {
+    "taxid": "1610",
+    "scientific_name": "Loigolactobacillus coryniformis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Loigolactobacillus"
+    }
+  },
+  "1421": {
+    "taxid": "1421",
+    "scientific_name": "Lysinibacillus sphaericus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Lysinibacillus"
+    }
+  },
+  "42858": {
+    "taxid": "42858",
+    "scientific_name": "Mammaliicoccus lentus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Mammaliicoccus"
+    }
+  },
+  "75985": {
+    "taxid": "75985",
+    "scientific_name": "Mannheimia haemolytica",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pasteurellales",
+      "family": "Pasteurellaceae",
+      "genus": "Mannheimia"
+    }
+  },
+  "409": {
+    "taxid": "409",
+    "scientific_name": "Methylobacterium sp.",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Alphaproteobacteria",
+      "order": "Hyphomicrobiales",
+      "family": "Methylobacteriaceae",
+      "genus": "Methylobacterium"
+    }
+  },
+  "33918": {
+    "taxid": "33918",
+    "scientific_name": "Microbacterium maritypicum",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Micrococcales",
+      "family": "Microbacteriaceae",
+      "genus": "Microbacterium"
+    }
+  },
+  "82380": {
+    "taxid": "82380",
+    "scientific_name": "Microbacterium oxydans",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Micrococcales",
+      "family": "Microbacteriaceae",
+      "genus": "Microbacterium"
+    }
+  },
+  "384602": {
+    "taxid": "384602",
+    "scientific_name": "Micrococcus flavus",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Micrococcales",
+      "family": "Micrococcaceae",
+      "genus": "Micrococcus"
+    }
+  },
+  "1270": {
+    "taxid": "1270",
+    "scientific_name": "Micrococcus luteus",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Micrococcales",
+      "family": "Micrococcaceae",
+      "genus": "Micrococcus"
+    }
+  },
+  "1271": {
+    "taxid": "1271",
+    "scientific_name": "Micrococcus sp.",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Micrococcales",
+      "family": "Micrococcaceae",
+      "genus": "Micrococcus"
+    }
+  },
+  "480": {
+    "taxid": "480",
+    "scientific_name": "Moraxella catarrhalis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Moraxella"
+    }
+  },
+  "582": {
+    "taxid": "582",
+    "scientific_name": "Morganella morganii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Morganellaceae",
+      "genus": "Morganella"
+    }
+  },
+  "36809": {
+    "taxid": "36809",
+    "scientific_name": "Mycobacteroides abscessus",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Mycobacteriaceae",
+      "genus": "Mycobacteroides"
+    }
+  },
+  "1764": {
+    "taxid": "1764",
+    "scientific_name": "Mycobacterium avium",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Mycobacteriaceae",
+      "genus": "Mycobacterium"
+    }
+  },
+  "1765": {
+    "taxid": "1765",
+    "scientific_name": "Mycobacterium tuberculosis variant bovis",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Mycobacteriaceae",
+      "genus": "Mycobacterium"
+    }
+  },
+  "1766": {
+    "taxid": "1766",
+    "scientific_name": "Mycolicibacterium fortuitum",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Mycobacteriaceae",
+      "genus": "Mycolicibacterium"
+    }
+  },
+  "1781": {
+    "taxid": "1781",
+    "scientific_name": "Mycobacterium marinum",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Mycobacteriaceae",
+      "genus": "Mycobacterium"
+    }
+  },
+  "1771": {
+    "taxid": "1771",
+    "scientific_name": "Mycolicibacterium phlei",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Mycobacteriaceae",
+      "genus": "Mycolicibacterium"
+    }
+  },
+  "1773": {
+    "taxid": "1773",
+    "scientific_name": "Mycobacterium tuberculosis",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Mycobacteriaceae",
+      "genus": "Mycobacterium"
+    }
+  },
+  "1810": {
+    "taxid": "1810",
+    "scientific_name": "Mycolicibacterium vaccae",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Mycobacteriaceae",
+      "genus": "Mycolicibacterium"
+    }
+  },
+  "59750": {
+    "taxid": "59750",
+    "scientific_name": "Mycolicibacterium wolinskyi",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Mycobacteriaceae",
+      "genus": "Mycolicibacterium"
+    }
+  },
+  "2102": {
+    "taxid": "2102",
+    "scientific_name": "Mycoplasma mycoides",
+    "ranks": {
+      "phylum": "Mycoplasmatota",
+      "class": "Mollicutes",
+      "order": "Mycoplasmatales",
+      "family": "Mycoplasmataceae",
+      "genus": "Mycoplasma"
+    }
+  },
+  "485": {
+    "taxid": "485",
+    "scientific_name": "Neisseria gonorrhoeae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Neisseriales",
+      "family": "Neisseriaceae",
+      "genus": "Neisseria"
+    }
+  },
+  "487": {
+    "taxid": "487",
+    "scientific_name": "Neisseria meningitidis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Neisseriales",
+      "family": "Neisseriaceae",
+      "genus": "Neisseria"
+    }
+  },
+  "488": {
+    "taxid": "488",
+    "scientific_name": "Neisseria mucosa",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Neisseriales",
+      "family": "Neisseriaceae",
+      "genus": "Neisseria"
+    }
+  },
+  "1397": {
+    "taxid": "1397",
+    "scientific_name": "Niallia circulans",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Niallia"
+    }
+  },
+  "115979": {
+    "taxid": "115979",
+    "scientific_name": "Niallia nealsonii",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Niallia"
+    }
+  },
+  "1824": {
+    "taxid": "1824",
+    "scientific_name": "Nocardia asteroides",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Nocardiaceae",
+      "genus": "Nocardia"
+    }
+  },
+  "37326": {
+    "taxid": "37326",
+    "scientific_name": "Nocardia brasiliensis",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Nocardiaceae",
+      "genus": "Nocardia"
+    }
+  },
+  "44250": {
+    "taxid": "44250",
+    "scientific_name": "Paenibacillus alvei",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Paenibacillaceae",
+      "genus": "Paenibacillus"
+    }
+  },
+  "1464": {
+    "taxid": "1464",
+    "scientific_name": "Paenibacillus larvae",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Paenibacillaceae",
+      "genus": "Paenibacillus"
+    }
+  },
+  "44252": {
+    "taxid": "44252",
+    "scientific_name": "Paenibacillus macerans",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Paenibacillaceae",
+      "genus": "Paenibacillus"
+    }
+  },
+  "1406": {
+    "taxid": "1406",
+    "scientific_name": "Paenibacillus polymyxa",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Paenibacillaceae",
+      "genus": "Paenibacillus"
+    }
+  },
+  "549": {
+    "taxid": "549",
+    "scientific_name": "Pantoea agglomerans",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Erwiniaceae",
+      "genus": "Pantoea"
+    }
+  },
+  "823": {
+    "taxid": "823",
+    "scientific_name": "Parabacteroides distasonis",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Bacteroidia",
+      "order": "Bacteroidales",
+      "family": "Tannerellaceae",
+      "genus": "Parabacteroides"
+    }
+  },
+  "134536": {
+    "taxid": "134536",
+    "scientific_name": "Paraburkholderia caledonica",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Burkholderiaceae",
+      "genus": "Paraburkholderia"
+    }
+  },
+  "75105": {
+    "taxid": "75105",
+    "scientific_name": "Paraburkholderia caribensis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Burkholderiaceae",
+      "genus": "Paraburkholderia"
+    }
+  },
+  "266": {
+    "taxid": "266",
+    "scientific_name": "Paracoccus denitrificans",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Alphaproteobacteria",
+      "order": "Rhodobacterales",
+      "family": "Paracoccaceae",
+      "genus": "Paracoccus"
+    }
+  },
+  "33033": {
+    "taxid": "33033",
+    "scientific_name": "Parvimonas micra",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Tissierellia",
+      "order": "Tissierellales",
+      "family": "Peptoniphilaceae",
+      "genus": "Parvimonas"
+    }
+  },
+  "747": {
+    "taxid": "747",
+    "scientific_name": "Pasteurella multocida",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pasteurellales",
+      "family": "Pasteurellaceae",
+      "genus": "Pasteurella"
+    }
+  },
+  "759": {
+    "taxid": "759",
+    "scientific_name": "Pasteurella sp.",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pasteurellales",
+      "family": "Pasteurellaceae",
+      "genus": "Pasteurella"
+    }
+  },
+  "554": {
+    "taxid": "554",
+    "scientific_name": "Pectobacterium carotovorum",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Pectobacteriaceae",
+      "genus": "Pectobacterium"
+    }
+  },
+  "1254": {
+    "taxid": "1254",
+    "scientific_name": "Pediococcus acidilactici",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Pediococcus"
+    }
+  },
+  "1255": {
+    "taxid": "1255",
+    "scientific_name": "Pediococcus pentosaceus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Pediococcus"
+    }
+  },
+  "1258": {
+    "taxid": "1258",
+    "scientific_name": "Peptoniphilus asaccharolyticus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Tissierellia",
+      "order": "Tissierellales",
+      "family": "Peptoniphilaceae",
+      "genus": "Peptoniphilus"
+    }
+  },
+  "1261": {
+    "taxid": "1261",
+    "scientific_name": "Peptostreptococcus anaerobius",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Clostridia",
+      "order": "Peptostreptococcales",
+      "family": "Peptostreptococcaceae",
+      "genus": "Peptostreptococcus"
+    }
+  },
+  "38293": {
+    "taxid": "38293",
+    "scientific_name": "Photobacterium damselae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Photobacterium"
+    }
+  },
+  "1373": {
+    "taxid": "1373",
+    "scientific_name": "Planococcus citreus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Caryophanaceae",
+      "genus": "Planococcus"
+    }
+  },
+  "703": {
+    "taxid": "703",
+    "scientific_name": "Plesiomonas shigelloides",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Plesiomonas"
+    }
+  },
+  "61647": {
+    "taxid": "61647",
+    "scientific_name": "Pluralibacter gergoviae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Pluralibacter"
+    }
+  },
+  "837": {
+    "taxid": "837",
+    "scientific_name": "Porphyromonas gingivalis",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Bacteroidia",
+      "order": "Bacteroidales",
+      "family": "Porphyromonadaceae",
+      "genus": "Porphyromonas"
+    }
+  },
+  "28131": {
+    "taxid": "28131",
+    "scientific_name": "Prevotella intermedia",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Bacteroidia",
+      "order": "Bacteroidales",
+      "family": "Prevotellaceae",
+      "genus": "Prevotella"
+    }
+  },
+  "28132": {
+    "taxid": "28132",
+    "scientific_name": "Prevotella melaninogenica",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Bacteroidia",
+      "order": "Bacteroidales",
+      "family": "Prevotellaceae",
+      "genus": "Prevotella"
+    }
+  },
+  "86664": {
+    "taxid": "86664",
+    "scientific_name": "Priestia flexa",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Bacillaceae",
+      "genus": "Priestia"
+    }
+  },
+  "1744": {
+    "taxid": "1744",
+    "scientific_name": "Propionibacterium freudenreichii",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Propionibacteriales",
+      "family": "Propionibacteriaceae",
+      "genus": "Propionibacterium"
+    }
+  },
+  "1977903": {
+    "taxid": "1977903",
+    "scientific_name": "Propionibacterium sp.",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Propionibacteriales",
+      "family": "Propionibacteriaceae",
+      "genus": "Propionibacterium"
+    }
+  },
+  "183417": {
+    "taxid": "183417",
+    "scientific_name": "Proteus hauseri",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Morganellaceae",
+      "genus": "Proteus"
+    }
+  },
+  "584": {
+    "taxid": "584",
+    "scientific_name": "Proteus mirabilis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Morganellaceae",
+      "genus": "Proteus"
+    }
+  },
+  "184072": {
+    "taxid": "184072",
+    "scientific_name": "Proteus myxofaciens",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Morganellaceae",
+      "genus": "Proteus"
+    }
+  },
+  "229037": {
+    "taxid": "229037",
+    "scientific_name": "Proteus sp. (in: enterobacteria)",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Morganellaceae",
+      "genus": "Proteus"
+    }
+  },
+  "585": {
+    "taxid": "585",
+    "scientific_name": "Proteus vulgaris",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Morganellaceae",
+      "genus": "Proteus"
+    }
+  },
+  "587": {
+    "taxid": "587",
+    "scientific_name": "Providencia rettgeri",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Morganellaceae",
+      "genus": "Providencia"
+    }
+  },
+  "588": {
+    "taxid": "588",
+    "scientific_name": "Providencia stuartii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Morganellaceae",
+      "genus": "Providencia"
+    }
+  },
+  "227": {
+    "taxid": "227",
+    "scientific_name": "Pseudoalteromonas carrageenovora",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Alteromonadales",
+      "family": "Pseudoalteromonadaceae",
+      "genus": "Pseudoalteromonas"
+    }
+  },
+  "287": {
+    "taxid": "287",
+    "scientific_name": "Pseudomonas aeruginosa",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Pseudomonas"
+    }
+  },
+  "37638": {
+    "taxid": "37638",
+    "scientific_name": "Pseudomonas alginovora",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Pseudomonas"
+    }
+  },
+  "47877": {
+    "taxid": "47877",
+    "scientific_name": "Pseudomonas amygdali",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Pseudomonas"
+    }
+  },
+  "47879": {
+    "taxid": "47879",
+    "scientific_name": "Pseudomonas corrugata",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Pseudomonas"
+    }
+  },
+  "1163398": {
+    "taxid": "1163398",
+    "scientific_name": "Pseudomonas donghuensis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Pseudomonas"
+    }
+  },
+  "294": {
+    "taxid": "294",
+    "scientific_name": "Pseudomonas fluorescens",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Pseudomonas"
+    }
+  },
+  "2600065": {
+    "taxid": "2600065",
+    "scientific_name": "Pseudomonas haemolytica",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Pseudomonas"
+    }
+  },
+  "47886": {
+    "taxid": "47886",
+    "scientific_name": "Pseudomonas luteola",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Pseudomonas"
+    }
+  },
+  "300": {
+    "taxid": "300",
+    "scientific_name": "Ectopseudomonas mendocina",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Ectopseudomonas"
+    }
+  },
+  "319939": {
+    "taxid": "319939",
+    "scientific_name": "Metapseudomonas otitidis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Metapseudomonas"
+    }
+  },
+  "70775": {
+    "taxid": "70775",
+    "scientific_name": "Pseudomonas plecoglossicida",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Pseudomonas"
+    }
+  },
+  "303": {
+    "taxid": "303",
+    "scientific_name": "Pseudomonas putida",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Pseudomonas"
+    }
+  },
+  "306": {
+    "taxid": "306",
+    "scientific_name": "Pseudomonas sp.",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Pseudomonas"
+    }
+  },
+  "317": {
+    "taxid": "317",
+    "scientific_name": "Pseudomonas syringae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Pseudomonas"
+    }
+  },
+  "29442": {
+    "taxid": "29442",
+    "scientific_name": "Pseudomonas tolaasii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Pseudomonas"
+    }
+  },
+  "33069": {
+    "taxid": "33069",
+    "scientific_name": "Pseudomonas viridiflava",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Pseudomonadales",
+      "family": "Pseudomonadaceae",
+      "genus": "Pseudomonas"
+    }
+  },
+  "282669": {
+    "taxid": "282669",
+    "scientific_name": "Psychrobacter cibarius",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Psychrobacter"
+    }
+  },
+  "180588": {
+    "taxid": "180588",
+    "scientific_name": "Psychrobacter faecalis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Psychrobacter"
+    }
+  },
+  "498": {
+    "taxid": "498",
+    "scientific_name": "Psychrobacter immobilis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Psychrobacter"
+    }
+  },
+  "56811": {
+    "taxid": "56811",
+    "scientific_name": "Psychrobacter sp.",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Moraxellales",
+      "family": "Moraxellaceae",
+      "genus": "Psychrobacter"
+    }
+  },
+  "329": {
+    "taxid": "329",
+    "scientific_name": "Ralstonia pickettii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Burkholderiaceae",
+      "genus": "Ralstonia"
+    }
+  },
+  "305": {
+    "taxid": "305",
+    "scientific_name": "Ralstonia solanacearum",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Betaproteobacteria",
+      "order": "Burkholderiales",
+      "family": "Burkholderiaceae",
+      "genus": "Ralstonia"
+    }
+  },
+  "54291": {
+    "taxid": "54291",
+    "scientific_name": "Klebsiella ornithinolytica",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Klebsiella"
+    }
+  },
+  "575": {
+    "taxid": "575",
+    "scientific_name": "Klebsiella planticola",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Klebsiella"
+    }
+  },
+  "577": {
+    "taxid": "577",
+    "scientific_name": "Klebsiella terrigena",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Klebsiella"
+    }
+  },
+  "1829": {
+    "taxid": "1829",
+    "scientific_name": "Rhodococcus rhodochrous",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Mycobacteriales",
+      "family": "Nocardiaceae",
+      "genus": "Rhodococcus"
+    }
+  },
+  "34085": {
+    "taxid": "34085",
+    "scientific_name": "Riemerella anatipestifer",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Flavobacteriia",
+      "order": "Flavobacteriales",
+      "family": "Weeksellaceae",
+      "genus": "Riemerella"
+    }
+  },
+  "85336": {
+    "taxid": "85336",
+    "scientific_name": "Rothia nasimurium",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Micrococcales",
+      "family": "Micrococcaceae",
+      "genus": "Rothia"
+    }
+  },
+  "459527": {
+    "taxid": "459527",
+    "scientific_name": "Saccharibacillus kuerlensis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Paenibacillaceae",
+      "genus": "Saccharibacillus"
+    }
+  },
+  "51367": {
+    "taxid": "51367",
+    "scientific_name": "Salinivibrio costicola",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Salinivibrio"
+    }
+  },
+  "28901": {
+    "taxid": "28901",
+    "scientific_name": "Salmonella enterica",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Salmonella"
+    }
+  },
+  "605": {
+    "taxid": "605",
+    "scientific_name": "Salmonella enterica subsp. enterica serovar Pullorum",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Salmonella"
+    }
+  },
+  "599": {
+    "taxid": "599",
+    "scientific_name": "Salmonella sp.",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Salmonella"
+    }
+  },
+  "90371": {
+    "taxid": "90371",
+    "scientific_name": "Salmonella enterica subsp. enterica serovar Typhimurium",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Salmonella"
+    }
+  },
+  "47917": {
+    "taxid": "47917",
+    "scientific_name": "Serratia fonticola",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Yersiniaceae",
+      "genus": "Serratia"
+    }
+  },
+  "615": {
+    "taxid": "615",
+    "scientific_name": "Serratia marcescens",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Yersiniaceae",
+      "genus": "Serratia"
+    }
+  },
+  "61652": {
+    "taxid": "61652",
+    "scientific_name": "Serratia rubidaea",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Yersiniaceae",
+      "genus": "Serratia"
+    }
+  },
+  "24": {
+    "taxid": "24",
+    "scientific_name": "Shewanella putrefaciens",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Alteromonadales",
+      "family": "Shewanellaceae",
+      "genus": "Shewanella"
+    }
+  },
+  "621": {
+    "taxid": "621",
+    "scientific_name": "Shigella boydii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Shigella"
+    }
+  },
+  "622": {
+    "taxid": "622",
+    "scientific_name": "Shigella dysenteriae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Shigella"
+    }
+  },
+  "623": {
+    "taxid": "623",
+    "scientific_name": "Shigella flexneri",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Shigella"
+    }
+  },
+  "624": {
+    "taxid": "624",
+    "scientific_name": "Shigella sonnei",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Shigella"
+    }
+  },
+  "625": {
+    "taxid": "625",
+    "scientific_name": "Shigella sp.",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Enterobacteriaceae",
+      "genus": "Shigella"
+    }
+  },
+  "382": {
+    "taxid": "382",
+    "scientific_name": "Sinorhizobium meliloti",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Alphaproteobacteria",
+      "order": "Hyphomicrobiales",
+      "family": "Rhizobiaceae",
+      "genus": "Sinorhizobium"
+    }
+  },
+  "459529": {
+    "taxid": "459529",
+    "scientific_name": "Sphingobacterium siyangense",
+    "ranks": {
+      "phylum": "Bacteroidota",
+      "class": "Sphingobacteriia",
+      "order": "Sphingobacteriales",
+      "family": "Sphingobacteriaceae",
+      "genus": "Sphingobacterium"
+    }
+  },
+  "2137": {
+    "taxid": "2137",
+    "scientific_name": "Spiroplasma apis",
+    "ranks": {
+      "phylum": "Mycoplasmatota",
+      "class": "Mollicutes",
+      "order": "Entomoplasmatales",
+      "family": "Spiroplasmataceae",
+      "genus": "Spiroplasma"
+    }
+  },
+  "2133": {
+    "taxid": "2133",
+    "scientific_name": "Spiroplasma citri",
+    "ranks": {
+      "phylum": "Mycoplasmatota",
+      "class": "Mollicutes",
+      "order": "Entomoplasmatales",
+      "family": "Spiroplasmataceae",
+      "genus": "Spiroplasma"
+    }
+  },
+  "216937": {
+    "taxid": "216937",
+    "scientific_name": "Spiroplasma floricola",
+    "ranks": {
+      "phylum": "Mycoplasmatota",
+      "class": "Mollicutes",
+      "order": "Entomoplasmatales",
+      "family": "Spiroplasmataceae",
+      "genus": "Spiroplasma"
+    }
+  },
+  "2134": {
+    "taxid": "2134",
+    "scientific_name": "Spiroplasma melliferum",
+    "ranks": {
+      "phylum": "Mycoplasmatota",
+      "class": "Mollicutes",
+      "order": "Entomoplasmatales",
+      "family": "Spiroplasmataceae",
+      "genus": "Spiroplasma"
+    }
+  },
+  "1571": {
+    "taxid": "1571",
+    "scientific_name": "Sporosarcina ureae",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Caryophanaceae",
+      "genus": "Sporosarcina"
+    }
+  },
+  "1280": {
+    "taxid": "1280",
+    "scientific_name": "Staphylococcus aureus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "29379": {
+    "taxid": "29379",
+    "scientific_name": "Staphylococcus auricularis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "29388": {
+    "taxid": "29388",
+    "scientific_name": "Staphylococcus capitis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "1281": {
+    "taxid": "1281",
+    "scientific_name": "Staphylococcus carnosus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "46126": {
+    "taxid": "46126",
+    "scientific_name": "Staphylococcus chromogenes",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "29382": {
+    "taxid": "29382",
+    "scientific_name": "Staphylococcus cohnii",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "1282": {
+    "taxid": "1282",
+    "scientific_name": "Staphylococcus epidermidis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "246432": {
+    "taxid": "246432",
+    "scientific_name": "Staphylococcus equorum",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "1283": {
+    "taxid": "1283",
+    "scientific_name": "Staphylococcus haemolyticus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "1290": {
+    "taxid": "1290",
+    "scientific_name": "Staphylococcus hominis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "1284": {
+    "taxid": "1284",
+    "scientific_name": "Staphylococcus hyicus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "1285": {
+    "taxid": "1285",
+    "scientific_name": "Staphylococcus intermedius",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "28035": {
+    "taxid": "28035",
+    "scientific_name": "Staphylococcus lugdunensis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "283734": {
+    "taxid": "283734",
+    "scientific_name": "Staphylococcus pseudintermedius",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "29385": {
+    "taxid": "29385",
+    "scientific_name": "Staphylococcus saprophyticus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "1286": {
+    "taxid": "1286",
+    "scientific_name": "Staphylococcus simulans",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "29387": {
+    "taxid": "29387",
+    "scientific_name": "Staphylococcus sp.",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "1292": {
+    "taxid": "1292",
+    "scientific_name": "Staphylococcus warneri",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "1288": {
+    "taxid": "1288",
+    "scientific_name": "Staphylococcus xylosus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Caryophanales",
+      "family": "Staphylococcaceae",
+      "genus": "Staphylococcus"
+    }
+  },
+  "40324": {
+    "taxid": "40324",
+    "scientific_name": "Stenotrophomonas maltophilia",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Lysobacterales",
+      "family": "Lysobacteraceae",
+      "genus": "Stenotrophomonas"
+    }
+  },
+  "69392": {
+    "taxid": "69392",
+    "scientific_name": "Stenotrophomonas sp.",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Lysobacterales",
+      "family": "Lysobacteraceae",
+      "genus": "Stenotrophomonas"
+    }
+  },
+  "1311": {
+    "taxid": "1311",
+    "scientific_name": "Streptococcus agalactiae",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "29389": {
+    "taxid": "29389",
+    "scientific_name": "Streptococcus alactolyticus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1328": {
+    "taxid": "1328",
+    "scientific_name": "Streptococcus anginosus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "76860": {
+    "taxid": "76860",
+    "scientific_name": "Streptococcus constellatus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1334": {
+    "taxid": "1334",
+    "scientific_name": "Streptococcus dysgalactiae",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1336": {
+    "taxid": "1336",
+    "scientific_name": "Streptococcus equi",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1335": {
+    "taxid": "1335",
+    "scientific_name": "Streptococcus equinus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1302": {
+    "taxid": "1302",
+    "scientific_name": "Streptococcus gordonii",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1346": {
+    "taxid": "1346",
+    "scientific_name": "Streptococcus iniae",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1338": {
+    "taxid": "1338",
+    "scientific_name": "Streptococcus intermedius",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "150055": {
+    "taxid": "150055",
+    "scientific_name": "Streptococcus lutetiensis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "28037": {
+    "taxid": "28037",
+    "scientific_name": "Streptococcus mitis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1309": {
+    "taxid": "1309",
+    "scientific_name": "Streptococcus mutans",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1303": {
+    "taxid": "1303",
+    "scientific_name": "Streptococcus oralis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1318": {
+    "taxid": "1318",
+    "scientific_name": "Streptococcus parasanguinis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1348": {
+    "taxid": "1348",
+    "scientific_name": "Streptococcus parauberis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "197614": {
+    "taxid": "197614",
+    "scientific_name": "Streptococcus pasteurianus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1313": {
+    "taxid": "1313",
+    "scientific_name": "Streptococcus pneumoniae",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1314": {
+    "taxid": "1314",
+    "scientific_name": "Streptococcus pyogenes",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1304": {
+    "taxid": "1304",
+    "scientific_name": "Streptococcus salivarius",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1305": {
+    "taxid": "1305",
+    "scientific_name": "Streptococcus sanguinis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "2973939": {
+    "taxid": "2973939",
+    "scientific_name": "Streptococcus sciuri",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1310": {
+    "taxid": "1310",
+    "scientific_name": "Streptococcus sobrinus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1306": {
+    "taxid": "1306",
+    "scientific_name": "Streptococcus sp.",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1307": {
+    "taxid": "1307",
+    "scientific_name": "Streptococcus suis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1308": {
+    "taxid": "1308",
+    "scientific_name": "Streptococcus thermophilus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "1349": {
+    "taxid": "1349",
+    "scientific_name": "Streptococcus uberis",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Streptococcaceae",
+      "genus": "Streptococcus"
+    }
+  },
+  "193461": {
+    "taxid": "193461",
+    "scientific_name": "Streptomyces aureus",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Kitasatosporales",
+      "family": "Streptomycetaceae",
+      "genus": "Streptomyces"
+    }
+  },
+  "1931": {
+    "taxid": "1931",
+    "scientific_name": "Streptomyces sp.",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Kitasatosporales",
+      "family": "Streptomycetaceae",
+      "genus": "Streptomyces"
+    }
+  },
+  "51669": {
+    "taxid": "51669",
+    "scientific_name": "Tetragenococcus halophilus",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Enterococcaceae",
+      "genus": "Tetragenococcus"
+    }
+  },
+  "1661": {
+    "taxid": "1661",
+    "scientific_name": "Trueperella pyogenes",
+    "ranks": {
+      "phylum": "Actinomycetota",
+      "class": "Actinomycetes",
+      "order": "Actinomycetales",
+      "family": "Actinomycetaceae",
+      "genus": "Trueperella"
+    }
+  },
+  "39777": {
+    "taxid": "39777",
+    "scientific_name": "Veillonella atypica",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Negativicutes",
+      "order": "Veillonellales",
+      "family": "Veillonellaceae",
+      "genus": "Veillonella"
+    }
+  },
+  "29466": {
+    "taxid": "29466",
+    "scientific_name": "Veillonella parvula",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Negativicutes",
+      "order": "Veillonellales",
+      "family": "Veillonellaceae",
+      "genus": "Veillonella"
+    }
+  },
+  "28171": {
+    "taxid": "28171",
+    "scientific_name": "Vibrio aestuarianus",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "663": {
+    "taxid": "663",
+    "scientific_name": "Vibrio alginolyticus",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "55601": {
+    "taxid": "55601",
+    "scientific_name": "Vibrio anguillarum",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "170652": {
+    "taxid": "170652",
+    "scientific_name": "Vibrio brasiliensis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "553239": {
+    "taxid": "553239",
+    "scientific_name": "Vibrio breoganii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "680": {
+    "taxid": "680",
+    "scientific_name": "Vibrio campbellii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "666": {
+    "taxid": "666",
+    "scientific_name": "Vibrio cholerae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "190893": {
+    "taxid": "190893",
+    "scientific_name": "Vibrio coralliilyticus",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "246167": {
+    "taxid": "246167",
+    "scientific_name": "Vibrio crassostreae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "50719": {
+    "taxid": "50719",
+    "scientific_name": "Vibrio diabolicus",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "676": {
+    "taxid": "676",
+    "scientific_name": "Vibrio fluvialis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "669": {
+    "taxid": "669",
+    "scientific_name": "Vibrio harveyi",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "142461": {
+    "taxid": "142461",
+    "scientific_name": "Vibrio ichthyoenteri",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "335972": {
+    "taxid": "335972",
+    "scientific_name": "Vibrio litoralis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "28172": {
+    "taxid": "28172",
+    "scientific_name": "Vibrio metschnikovii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "28173": {
+    "taxid": "28173",
+    "scientific_name": "Vibrio nigripulchritudo",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "28174": {
+    "taxid": "28174",
+    "scientific_name": "Vibrio ordalii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "28175": {
+    "taxid": "28175",
+    "scientific_name": "Vibrio orientalis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "670": {
+    "taxid": "670",
+    "scientific_name": "Vibrio parahaemolyticus",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "104609": {
+    "taxid": "104609",
+    "scientific_name": "Vibrio penaeicida",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "671": {
+    "taxid": "671",
+    "scientific_name": "Vibrio proteolyticus",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "689": {
+    "taxid": "689",
+    "scientific_name": "Vibrio mediterranei",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "678": {
+    "taxid": "678",
+    "scientific_name": "Vibrio sp.",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "29497": {
+    "taxid": "29497",
+    "scientific_name": "Vibrio splendidus",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "52443": {
+    "taxid": "52443",
+    "scientific_name": "Vibrio tapetis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "212663": {
+    "taxid": "212663",
+    "scientific_name": "Vibrio tasmaniensis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "672": {
+    "taxid": "672",
+    "scientific_name": "Vibrio vulnificus",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Vibrionales",
+      "family": "Vibrionaceae",
+      "genus": "Vibrio"
+    }
+  },
+  "1583": {
+    "taxid": "1583",
+    "scientific_name": "Weissella confusa",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Weissella"
+    }
+  },
+  "1629": {
+    "taxid": "1629",
+    "scientific_name": "Weissella viridescens",
+    "ranks": {
+      "phylum": "Bacillota",
+      "class": "Bacilli",
+      "order": "Lactobacillales",
+      "family": "Lactobacillaceae",
+      "genus": "Weissella"
+    }
+  },
+  "56448": {
+    "taxid": "56448",
+    "scientific_name": "Xanthomonas arboricola",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Lysobacterales",
+      "family": "Lysobacteraceae",
+      "genus": "Xanthomonas"
+    }
+  },
+  "53413": {
+    "taxid": "53413",
+    "scientific_name": "Xanthomonas axonopodis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Lysobacterales",
+      "family": "Lysobacteraceae",
+      "genus": "Xanthomonas"
+    }
+  },
+  "339": {
+    "taxid": "339",
+    "scientific_name": "Xanthomonas campestris",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Lysobacterales",
+      "family": "Lysobacteraceae",
+      "genus": "Xanthomonas"
+    }
+  },
+  "346": {
+    "taxid": "346",
+    "scientific_name": "Xanthomonas citri",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Lysobacterales",
+      "family": "Lysobacteraceae",
+      "genus": "Xanthomonas"
+    }
+  },
+  "456327": {
+    "taxid": "456327",
+    "scientific_name": "Xanthomonas euvesicatoria",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Lysobacterales",
+      "family": "Lysobacteraceae",
+      "genus": "Xanthomonas"
+    }
+  },
+  "48664": {
+    "taxid": "48664",
+    "scientific_name": "Xanthomonas fragariae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Lysobacterales",
+      "family": "Lysobacteraceae",
+      "genus": "Xanthomonas"
+    }
+  },
+  "347": {
+    "taxid": "347",
+    "scientific_name": "Xanthomonas oryzae",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Lysobacterales",
+      "family": "Lysobacteraceae",
+      "genus": "Xanthomonas"
+    }
+  },
+  "442694": {
+    "taxid": "442694",
+    "scientific_name": "Xanthomonas perforans",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Lysobacterales",
+      "family": "Lysobacteraceae",
+      "genus": "Xanthomonas"
+    }
+  },
+  "343": {
+    "taxid": "343",
+    "scientific_name": "Xanthomonas translucens",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Lysobacterales",
+      "family": "Lysobacteraceae",
+      "genus": "Xanthomonas"
+    }
+  },
+  "56460": {
+    "taxid": "56460",
+    "scientific_name": "Xanthomonas vesicatoria",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Lysobacterales",
+      "family": "Lysobacteraceae",
+      "genus": "Xanthomonas"
+    }
+  },
+  "53341": {
+    "taxid": "53341",
+    "scientific_name": "Xenorhabdus japonica",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Morganellaceae",
+      "genus": "Xenorhabdus"
+    }
+  },
+  "630": {
+    "taxid": "630",
+    "scientific_name": "Yersinia enterocolitica",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Yersiniaceae",
+      "genus": "Yersinia"
+    }
+  },
+  "33060": {
+    "taxid": "33060",
+    "scientific_name": "Yersinia mollaretii",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Yersiniaceae",
+      "genus": "Yersinia"
+    }
+  },
+  "632": {
+    "taxid": "632",
+    "scientific_name": "Yersinia pestis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Yersiniaceae",
+      "genus": "Yersinia"
+    }
+  },
+  "633": {
+    "taxid": "633",
+    "scientific_name": "Yersinia pseudotuberculosis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Yersiniaceae",
+      "genus": "Yersinia"
+    }
+  },
+  "29486": {
+    "taxid": "29486",
+    "scientific_name": "Yersinia ruckeri",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Gammaproteobacteria",
+      "order": "Enterobacterales",
+      "family": "Yersiniaceae",
+      "genus": "Yersinia"
+    }
+  },
+  "542": {
+    "taxid": "542",
+    "scientific_name": "Zymomonas mobilis",
+    "ranks": {
+      "phylum": "Pseudomonadota",
+      "class": "Alphaproteobacteria",
+      "order": "Sphingomonadales",
+      "family": "Zymomonadaceae",
+      "genus": "Zymomonas"
+    }
+  }
+}
