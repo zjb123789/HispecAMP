@@ -28,15 +28,15 @@ SEED = 1
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 MAX_EPOCHS = 500
 PATIENCE = 30
-PATH_EMB_PATH = "MIC_pridiction/pathogen_embeddings.pt"
+PATH_EMB_PATH = "../pathogen_embeddings.pt"
 
-TAXONOMY_JSON_PATH = "MIC_pridiction/pathogen_taxonomy_by_taxid.json"
+TAXONOMY_JSON_PATH = "../pathogen_taxonomy_by_taxid.json"
 
 OUT_DIR = "./results_gridsearch"
 os.makedirs(OUT_DIR, exist_ok=True)
 LOG_FILE = os.path.join(OUT_DIR, "grid_search.log")
 
-INDEPENDENT_TEST_PATH = "MIC_pridiction/warmstart/split_data/test.csv"
+INDEPENDENT_TEST_PATH = "../warmstart/split_data/test.csv"
 
 GS_MAX_EPOCHS = 300
 GS_PATIENCE = 20
@@ -188,7 +188,7 @@ def grid_search():
     if os.path.exists(LOG_FILE):
         os.remove(LOG_FILE)
 
-    data_5fold = pd.read_csv('MIC_pridiction/warmstart/split_data/data_5folds.csv')
+    data_5fold = pd.read_csv('../warmstart/split_data/data_5folds.csv')
     test_df = pd.read_csv(INDEPENDENT_TEST_PATH)
 
     feature_cols = [c for c in data_5fold.columns if c.startswith("ESM_")]
