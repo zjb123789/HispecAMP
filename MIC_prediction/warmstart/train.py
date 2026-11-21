@@ -34,7 +34,6 @@ LOG_FILE = os.path.join(OUT_DIR, "grid_search.log")
 
 INDEPENDENT_TEST_PATH = "MIC_pridiction/warmstart/split_data/test.csv"
 
-# 网格搜索阶段可以单独设一个更短的 epoch 上限（可选）
 GS_MAX_EPOCHS = 300
 GS_PATIENCE = 20
 
@@ -185,20 +184,16 @@ def grid_search():
     if os.path.exists(LOG_FILE):
         os.remove(LOG_FILE)
 
-    # 加载数据
-    data_5fold = pd.read_csv('/root/autodl-tmp/QMAP_warmstart/split_data/data_5folds.csv')
+    data_5fold = pd.read_csv('MIC_pridiction/warmstart/split_data/data_5folds.csv')
     test_df = pd.read_csv(INDEPENDENT_TEST_PATH)
 
     feature_cols = [c for c in data_5fold.columns if c.startswith("ESM_")]
 
-    # 加载病原体嵌入（key 是 taxid）
     pathogen_emb = torch.load(PATH_EMB_PATH, map_location="cpu")
 
-    # 加载 name -> taxid 映射
     name2taxid = load_name2taxid(TAXONOMY_JSON_PATH)
     log(f"[Taxonomy] 载入 name->taxid: {len(name2taxid)} 条")
 
-    # 获取所有病原体（包括测试集中的）
     all_pathogens = pd.concat([
         data_5fold["pathogen"].astype(str).str.strip(),
         test_df["pathogen"].astype(str).str.strip(),
@@ -247,44 +242,33 @@ def grid_search():
     keys = list(param_grid.keys())
     values = list(param_grid.values())
 
-    # 排除的组合（已在别处验证过或不打算再搜）
-    EXCLUDED_PARAMS = [
-        {"hidden_dim": 1024, "lr": 1e-4,  "batch_size": 128},
-        {"hidden_dim": 1024, "lr": 1e-4,  "batch_size": 64},
-        {"hidden_dim": 1024, "lr": 1e-4,  "batch_size": 32},
-        {"hidden_dim": 1024, "lr": 5e-4,  "batch_size": 128},
-    ]
-    def is_excluded(params):
-        return any(
-            all(params[k] == ex[k] for k in keys)
-            for ex in EXCLUDED_PARAMS
-        )
-
+    param_grid = {
+        "hidden_dim": [1024, 512, 256],
+        "lr": [1e-4, 5e-4, 1e-3],
+        "batch_size": [128, 64, 32],
+    }
+    keys = list(param_grid.keys())
+    values = list(param_grid.values())
+    
     n_total = int(np.prod([len(v) for v in values]))
-    n_combinations = n_total - sum(1 for c in itertools.product(*values)
-                                   if is_excluded(dict(zip(keys, c))))
-
+    n_combinations = n_total
+    
     log(f"\nGrid Search Space: {param_grid}")
-    log(f"Total combinations (raw): {n_total}")
-    log(f"Excluded: {n_total - n_combinations}")
+    log(f"Total combinations: {n_total}")
     log(f"Combinations to run: {n_combinations}")
     log(f"GS_MAX_EPOCHS={GS_MAX_EPOCHS}, GS_PATIENCE={GS_PATIENCE}")
 
     best_val_loss = float("inf")
     best_params = None
 
-    all_results = []   # 记录每组结果，便于事后分析
+    all_results = []   
 
     run_idx = 0
     for combo in itertools.product(*values):
         params = dict(zip(keys, combo))
 
-        if is_excluded(params):
-            log(f"\n[skip] {params}  (在排除列表中)")
-            continue
-
         run_idx += 1
-        set_seed(SEED)   # ← 每组重置种子，保证可比/可复现
+        set_seed(SEED)   
         log(f"\n[{run_idx}/{n_combinations}] Testing: {params}")
 
         train_loader = DataLoader(
@@ -314,22 +298,17 @@ def grid_search():
             best_params = params.copy()
             log(f"  >>> NEW BEST PARAMS! Val Loss: {val_loss:.6f}")
 
-    # =========================
-    # 输出搜索结果
-    # =========================
     log(f"\n{'='*70}")
     log("GRID SEARCH COMPLETE")
     log(f"{'='*70}")
     log(f"Best Params: {best_params}")
     log(f"Best Val Loss (fold0): {best_val_loss:.6f}")
 
-    # 按 val_loss 排序打印全部结果
     log("\n--- All Combinations Sorted by Val Loss ---")
     for r in sorted(all_results, key=lambda x: x["val_loss"]):
         log(f"hidden_dim={r['hidden_dim']:>4d}, lr={r['lr']:.0e}, "
             f"batch_size={r['batch_size']:>3d}  ->  Val Loss: {r['val_loss']:.6f}")
 
-    # 保存 JSON
     summary = {
         "search_setting": {
             "validation_fold": 0,
@@ -347,7 +326,6 @@ def grid_search():
         json.dump(summary, f, indent=2)
     log(f"\nResults saved to: {out_json}")
 
-    # 额外：把 best_params 单独存一份，方便后续 5 折 CV 脚本读取
     best_params_path = os.path.join(OUT_DIR, "best_params.json")
     with open(best_params_path, "w", encoding="utf-8") as f:
         json.dump(best_params, f, indent=2)
