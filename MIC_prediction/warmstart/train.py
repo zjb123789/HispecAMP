@@ -241,14 +241,6 @@ def grid_search():
     }
     keys = list(param_grid.keys())
     values = list(param_grid.values())
-
-    param_grid = {
-        "hidden_dim": [1024, 512, 256],
-        "lr": [1e-4, 5e-4, 1e-3],
-        "batch_size": [128, 64, 32],
-    }
-    keys = list(param_grid.keys())
-    values = list(param_grid.values())
     
     n_total = int(np.prod([len(v) for v in values]))
     n_combinations = n_total
