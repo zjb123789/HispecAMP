@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 """
 Taxonomy-aware microbial representation pretraining
-(TWO-STAGE FIXED VERSION)
-
-Stage 1: CE training
-Stage 2: metric fine-tuning (encoder only)
 """
 
 import os
@@ -26,55 +22,49 @@ from tqdm import tqdm
 from safetensors.torch import save_file
 
 # =========================================================
+# reproducibility   <<< 新增
+# =========================================================
+
+SEED = 42
+random.seed(SEED)
+np.random.seed(SEED)
+torch.manual_seed(SEED)
+torch.cuda.manual_seed(SEED)
+torch.cuda.manual_seed_all(SEED)
+
+torch.backends.cudnn.deterministic = True
+torch.backends.cudnn.benchmark = False
+
+print(f"[Reproducibility] SEED = {SEED}")
+
+# =========================================================
 # config
 # =========================================================
 
 JSON_PATH = "pretraining_data/lineage_ranked.json"
+
 MODEL_NAME = "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract"
 
 BATCH_SIZE = 32
-STAGE1_EPOCHS = 50
-STAGE2_EPOCHS = 15
 
-LR_STAGE1 = 2e-5
-LR_STAGE2 = 5e-6
+EPOCHS = 15
+
+LR = 5e-6
 
 MAX_LEN = 128
+
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-OUTPUT_DIR = "./pretrained_model"
-
-TARGET_RANKS = ["phylum", "class", "order", "family", "genus"]
-
-LOSS_WEIGHTS = {
-    "phylum": 0.5,
-    "class": 0.7,
-    "order": 1.0,
-    "family": 1.2,
-    "genus": 1.5,
-}
+OUTPUT_DIR = "./taxonomy_encoder"
 
 # =========================================================
 # load data
 # =========================================================
 
 print("Loading data...")
+
 with open(JSON_PATH, "r", encoding="utf-8") as f:
     data = json.load(f)
-
-rank_vocab = {r: set() for r in TARGET_RANKS}
-
-for info in data.values():
-    for r in TARGET_RANKS:
-        rank_vocab[r].add(info["ranks"][r])
-
-rank2id = {}
-num_classes = {}
-
-for r in TARGET_RANKS:
-    labels = sorted(rank_vocab[r])
-    rank2id[r] = {l: i for i, l in enumerate(labels)}
-    num_classes[r] = len(labels)
 
 # =========================================================
 # samples
@@ -83,10 +73,12 @@ for r in TARGET_RANKS:
 samples = []
 
 for taxid, info in data.items():
+
     r = info["ranks"]
 
     samples.append({
         "taxid": int(taxid),
+
         "text":
             f"[PHYLUM] {r['phylum']} "
             f"[CLASS] {r['class']} "
@@ -96,18 +88,18 @@ for taxid, info in data.items():
             f"[SPECIES] {info['scientific_name']}",
 
         "species": info["scientific_name"],
+
         "phylum": r["phylum"],
         "class": r["class"],
         "order": r["order"],
         "family": r["family"],
         "genus": r["genus"],
-        "labels": [rank2id[k][r[k]] for k in TARGET_RANKS]
     })
 
 print("samples:", len(samples))
 
 # =========================================================
-# taxonomy index
+# taxonomy maps
 # =========================================================
 
 genus_map = defaultdict(list)
@@ -117,6 +109,7 @@ class_map = defaultdict(list)
 phylum_map = defaultdict(list)
 
 for i, s in enumerate(samples):
+
     genus_map[s["genus"]].append(i)
     family_map[s["family"]].append(i)
     order_map[s["order"]].append(i)
@@ -130,34 +123,31 @@ all_indices = list(range(len(samples)))
 # =========================================================
 
 class TaxonomyBatchSampler:
+
     def __init__(self, batch_size):
         self.batch_size = batch_size
 
     def __iter__(self):
+
         order = []
 
         while len(order) < len(samples):
 
             batch = []
 
-            # genus
             g = random.choice(list(genus_map.keys()))
             if len(genus_map[g]) >= 2:
                 batch += random.sample(genus_map[g], 2)
 
-            # family
             f = random.choice(list(family_map.keys()))
             batch.append(random.choice(family_map[f]))
 
-            # order
             o = random.choice(list(order_map.keys()))
             batch.append(random.choice(order_map[o]))
 
-            # class (IMPORTANT FIX)
             c = random.choice(list(class_map.keys()))
             batch.append(random.choice(class_map[c]))
 
-            # phylum
             p = random.choice(list(phylum_map.keys()))
             batch.append(random.choice(phylum_map[p]))
 
@@ -172,12 +162,17 @@ class TaxonomyBatchSampler:
         return len(samples)
 
 # =========================================================
-# dataset
+# tokenizer
 # =========================================================
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
+# =========================================================
+# dataset
+# =========================================================
+
 class TaxonomyDataset(Dataset):
+
     def __init__(self, samples):
         self.samples = samples
 
@@ -185,6 +180,7 @@ class TaxonomyDataset(Dataset):
         return len(samples)
 
     def __getitem__(self, idx):
+
         s = self.samples[idx]
 
         enc = tokenizer(
@@ -198,9 +194,10 @@ class TaxonomyDataset(Dataset):
         return {
             "input_ids": enc["input_ids"].squeeze(0),
             "attention_mask": enc["attention_mask"].squeeze(0),
-            "labels": torch.tensor(s["labels"]),
+
             "taxid": s["taxid"],
             "species": s["species"],
+
             "phylum": s["phylum"],
             "class": s["class"],
             "order": s["order"],
@@ -209,12 +206,14 @@ class TaxonomyDataset(Dataset):
         }
 
 def collate_fn(batch):
+
     return {
         "input_ids": torch.stack([b["input_ids"] for b in batch]),
         "attention_mask": torch.stack([b["attention_mask"] for b in batch]),
-        "labels": torch.stack([b["labels"] for b in batch]),
+
         "taxid": [b["taxid"] for b in batch],
         "species": [b["species"] for b in batch],
+
         "phylum": [b["phylum"] for b in batch],
         "class": [b["class"] for b in batch],
         "order": [b["order"] for b in batch],
@@ -223,6 +222,7 @@ def collate_fn(batch):
     }
 
 dataset = TaxonomyDataset(samples)
+
 sampler = TaxonomyBatchSampler(BATCH_SIZE)
 
 dataloader = DataLoader(
@@ -238,26 +238,25 @@ dataloader = DataLoader(
 # =========================================================
 
 class TaxonomyEncoder(nn.Module):
+
     def __init__(self):
+
         super().__init__()
+
         self.encoder = AutoModel.from_pretrained(MODEL_NAME)
 
-        h = self.encoder.config.hidden_size
-
-        self.classifiers = nn.ModuleDict({
-            r: nn.Linear(h, num_classes[r])
-            for r in TARGET_RANKS
-        })
-
     def forward(self, input_ids, attention_mask):
-        out = self.encoder(input_ids=input_ids, attention_mask=attention_mask)
+
+        out = self.encoder(
+            input_ids=input_ids,
+            attention_mask=attention_mask
+        )
 
         emb = out.last_hidden_state.mean(dim=1)
+
         emb = F.normalize(emb, dim=1)
 
-        logits = {r: self.classifiers[r](emb) for r in TARGET_RANKS}
-
-        return logits, emb
+        return emb
 
 model = TaxonomyEncoder().to(DEVICE)
 
@@ -265,33 +264,48 @@ model = TaxonomyEncoder().to(DEVICE)
 # metric loss
 # =========================================================
 
-def metric_loss(emb, genus, family, order, class_, phylum):
+def metric_loss(
+    emb,
+    genus,
+    family,
+    order,
+    class_,
+    phylum
+):
 
     B = emb.size(0)
+
     loss = 0.0
     cnt = 0
 
     for i in range(B):
+
         for j in range(i + 1, B):
 
             d = torch.norm(emb[i] - emb[j])
 
             if genus[i] == genus[j]:
+
                 loss += F.relu(0.25 - d) + F.relu(d - 0.45)
 
             elif family[i] == family[j]:
+
                 loss += F.relu(0.45 - d) + F.relu(d - 0.65)
 
             elif order[i] == order[j]:
+
                 loss += F.relu(0.65 - d) + F.relu(d - 0.85)
 
             elif class_[i] == class_[j]:
+
                 loss += F.relu(0.85 - d) + F.relu(d - 1.00)
 
             elif phylum[i] == phylum[j]:
+
                 loss += F.relu(1.00 - d) + F.relu(d - 1.15)
 
             else:
+
                 loss += F.relu(1.25 - d)
 
             cnt += 1
@@ -299,92 +313,40 @@ def metric_loss(emb, genus, family, order, class_, phylum):
     return loss / max(cnt, 1)
 
 # =========================================================
-# STAGE 1: CE
+# optimizer
 # =========================================================
 
-print("\n=== STAGE 1: CE TRAINING ===\n")
+optimizer = AdamW(model.parameters(), lr=LR)
 
-optimizer = AdamW(model.parameters(), lr=LR_STAGE1)
-total_steps = len(dataloader) * STAGE1_EPOCHS
+total_steps = len(dataloader) * EPOCHS
 
 scheduler = get_linear_schedule_with_warmup(
-    optimizer, int(0.1 * total_steps), total_steps
+    optimizer,
+    int(0.1 * total_steps),
+    total_steps
 )
+
+# =========================================================
+# train
+# =========================================================
+
+print("\n=== METRIC LEARNING ===\n")
 
 model.train()
 
-for epoch in range(STAGE1_EPOCHS):
-
-    total_ce = 0.0
-    step = 0
-
-    pbar = tqdm(dataloader, desc=f"Stage1 {epoch+1}")
-
-    for batch in pbar:
-
-        x = batch["input_ids"].to(DEVICE)
-        m = batch["attention_mask"].to(DEVICE)
-        y = batch["labels"].to(DEVICE)
-
-        logits, _ = model(x, m)
-
-        ce = sum(
-            LOSS_WEIGHTS[r] * F.cross_entropy(logits[r], y[:, i])
-            for i, r in enumerate(TARGET_RANKS)
-        )
-
-        optimizer.zero_grad()
-        ce.backward()
-        optimizer.step()
-        scheduler.step()
-
-        total_ce += ce.item()
-        step += 1
-
-        pbar.set_postfix({
-            "ce": f"{ce.item():.4f}"
-        })
-
-    print(
-        f"\nStage1 Epoch {epoch+1} Summary:"
-        f"\n  Avg CE Loss: {total_ce/step:.6f}\n"
-    )
-
-# =========================================================
-# STAGE 2: METRIC
-# =========================================================
-
-print("\n=== STAGE 2: METRIC TRAINING ===\n")
-
-for p in model.classifiers.parameters():
-    p.requires_grad = False
-
-optimizer = AdamW(
-    filter(lambda p: p.requires_grad, model.parameters()),
-    lr=LR_STAGE2
-)
-
-total_steps = len(dataloader) * STAGE2_EPOCHS
-
-scheduler = get_linear_schedule_with_warmup(
-    optimizer, int(0.1 * total_steps), total_steps
-)
-
-model.train()
-
-for epoch in range(STAGE2_EPOCHS):
+for epoch in range(EPOCHS):
 
     total_mt = 0.0
     step = 0
 
-    pbar = tqdm(dataloader, desc=f"Stage2 {epoch+1}")
+    pbar = tqdm(dataloader, desc=f"Epoch {epoch+1}")
 
     for batch in pbar:
 
         x = batch["input_ids"].to(DEVICE)
         m = batch["attention_mask"].to(DEVICE)
 
-        logits, emb = model(x, m)
+        emb = model(x, m)
 
         mt = metric_loss(
             emb,
@@ -396,8 +358,11 @@ for epoch in range(STAGE2_EPOCHS):
         )
 
         optimizer.zero_grad()
+
         mt.backward()
+
         optimizer.step()
+
         scheduler.step()
 
         total_mt += mt.item()
@@ -408,13 +373,14 @@ for epoch in range(STAGE2_EPOCHS):
         })
 
     print(
-        f"\nStage2 Epoch {epoch+1} Summary:"
-        f"\n  Avg Metric Loss: {total_mt/step:.6f}\n"
+        f"\nEpoch {epoch+1}"
+        f"\nAvg Metric Loss: {total_mt/step:.6f}\n"
     )
 
 # =========================================================
-# SAVE MODEL
+# save
 # =========================================================
+
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 save_file(
@@ -425,7 +391,7 @@ save_file(
 tokenizer.save_pretrained(OUTPUT_DIR)
 
 # =========================================================
-# EXTRACT EMBEDDINGS
+# extract embeddings
 # =========================================================
 
 print("\nExtracting embeddings...\n")
@@ -443,7 +409,7 @@ with torch.no_grad():
         x = batch["input_ids"].to(DEVICE)
         m = batch["attention_mask"].to(DEVICE)
 
-        _, emb = model(x, m)
+        emb = model(x, m)
 
         all_emb.append(emb.cpu().numpy())
 
