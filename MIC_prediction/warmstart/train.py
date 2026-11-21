@@ -1,9 +1,5 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-MIC Regression for warmstart
-1. Grid search on fold0 to find best hyperparameters
-2. Train on fold 0-4 using best parameters
-"""
 import os
 import random
 import numpy as np
@@ -19,7 +15,7 @@ from torch.utils.data import Dataset, DataLoader
 from sklearn.metrics import mean_squared_error, r2_score
 from scipy.stats import pearsonr, kendalltau
 
-from HispecAMP.film_align import AlignmentModel
+from film_align import AlignmentModel
 
 # =========================
 # Config
@@ -28,15 +24,19 @@ SEED = 1
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 MAX_EPOCHS = 500
 PATIENCE = 30
-PATH_EMB_PATH = "../54_species_embeddings.pt"
+PATH_EMB_PATH = "../pathogen_embeddings.pt"
 
-OUT_DIR = "./results_5fold_cv"
+TAXONOMY_JSON_PATH = "../pathogen_taxonomy_by_taxid.json"
+
+OUT_DIR = "./results_gridsearch"
 os.makedirs(OUT_DIR, exist_ok=True)
-LOG_FILE = os.path.join(OUT_DIR, "5fold_cv.log")
-FOLD_MODELS_DIR = os.path.join(OUT_DIR, "fold_models")
-os.makedirs(FOLD_MODELS_DIR, exist_ok=True)
+LOG_FILE = os.path.join(OUT_DIR, "grid_search.log")
 
-INDEPENDENT_TEST_PATH = "./data/test.csv"
+INDEPENDENT_TEST_PATH = "/root/autodl-tmp/QMAP_warmstart/split_data/test.csv"
+
+# 网格搜索阶段可以单独设一个更短的 epoch 上限（可选）
+GS_MAX_EPOCHS = 300
+GS_PATIENCE = 20
 
 # =========================
 # Logger
@@ -54,6 +54,20 @@ def set_seed(seed):
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
+
+def load_name2taxid(json_path):
+    with open(json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    data = data.get("pathogen_to_taxonomy", data)
+    name2taxid = {}
+    for taxid, info in data.items():
+        if not isinstance(info, dict):
+            continue
+        name = (info.get("scientific_name") or "").strip()
+        if not name:
+            continue
+        name2taxid.setdefault(name, str(taxid).strip())
+    return name2taxid
 
 def evaluate(y_true, y_pred):
     return {
@@ -82,14 +96,40 @@ class AlignmentDataset(Dataset):
 # =========================
 # Feature builder
 # =========================
-def build_X(df, feature_cols, pathogen_emb):
+def build_X(df, feature_cols, pathogen_emb, name2taxid, warn_tag=""):
     seq_feat = df[feature_cols].values.astype(np.float32)
+    path_dim = next(iter(pathogen_emb.values())).numel()
+
     path_feat = []
-    for p in df["pathogen"]:
-        emb = pathogen_emb[p]
+    missing_map = set()
+    missing_emb = set()
+
+    for p in df["pathogen"].astype(str).str.strip():
+        taxid = name2taxid.get(p)
+        emb = None
+        if taxid is not None:
+            emb = pathogen_emb.get(taxid)
+            if emb is None:
+                missing_emb.add((p, taxid))
+        else:
+            missing_map.add(p)
+
+        if emb is None:
+            emb = torch.zeros(path_dim, dtype=torch.float32)
+
         if isinstance(emb, torch.Tensor):
             emb = emb.detach().cpu().view(-1).numpy()
-        path_feat.append(emb.astype(np.float32))
+        path_feat.append(np.asarray(emb, dtype=np.float32).reshape(-1))
+
+    if missing_map:
+        log(f"  [Warn{(' ' + warn_tag) if warn_tag else ''}] "
+            f"{len(missing_map)} 个 pathogen 名字未在 taxonomy JSON 中找到（零向量兜底）: "
+            f"{sorted(missing_map)[:10]}{' ...' if len(missing_map) > 10 else ''}")
+    if missing_emb:
+        log(f"  [Warn{(' ' + warn_tag) if warn_tag else ''}] "
+            f"{len(missing_emb)} 个 taxid 未在 {os.path.basename(PATH_EMB_PATH)} 中找到（零向量兜底）: "
+            f"{sorted(list(missing_emb))[:10]}{' ...' if len(missing_emb) > 10 else ''}")
+
     return np.concatenate([seq_feat, np.asarray(path_feat)], axis=1)
 
 # =========================
@@ -118,7 +158,7 @@ def train_es(model, optimizer, train_loader, val_loader, max_epochs, patience):
                 val_loss += loss.item() * x.size(0)
 
         val_loss /= len(val_loader.dataset)
-        
+
         if epoch % 10 == 0 or epoch == 1:
             log(f"  Epoch {epoch}/{max_epochs}, Val Loss: {val_loss:.6f}")
 
@@ -137,421 +177,188 @@ def train_es(model, optimizer, train_loader, val_loader, max_epochs, patience):
     return best_loss, model
 
 # =========================
-# Model save/load
+# Main: Grid Search only
 # =========================
-def save_model(model, pathogen2id, y_mean, y_std, feature_cols,
-               seq_dim, path_dim, hidden_dim, model_path, config_path,
-               norm_params_path, mapping_path):
-    torch.save({
-        'model_state_dict': model.state_dict(),
-        'seq_dim': seq_dim,
-        'path_dim': path_dim,
-        'hidden_dim': hidden_dim,
-    }, model_path)
-
-    model_config = {
-        'seq_dim': seq_dim,
-        'path_dim': path_dim,
-        'hidden_dim': hidden_dim,
-        'use_align': True,
-        'use_cross': True,
-        'num_pathogens': len(pathogen2id),
-    }
-    with open(config_path, 'w', encoding='utf-8') as f:
-        json.dump(model_config, f, indent=2)
-
-    norm_params = {
-        'y_mean': float(y_mean),
-        'y_std': float(y_std),
-    }
-    with open(norm_params_path, 'w', encoding='utf-8') as f:
-        json.dump(norm_params, f, indent=2)
-
-    pathogen_mapping = {k: int(v) for k, v in pathogen2id.items()}
-    with open(mapping_path, 'w', encoding='utf-8') as f:
-        json.dump(pathogen_mapping, f, indent=2)
-
-def load_model(model_path, config_path, device=DEVICE):
-    with open(config_path, 'r', encoding='utf-8') as f:
-        config = json.load(f)
-    
-    model = AlignmentModel(
-        seq_dim=config['seq_dim'],
-        path_dim=config['path_dim'],
-        hidden_dim=config['hidden_dim'],
-        use_align=config.get('use_align', True),
-        use_cross=config.get('use_cross', True),
-    ).to(device)
-    
-    checkpoint = torch.load(model_path, map_location=device)
-    model.load_state_dict(checkpoint['model_state_dict'])
-    model.eval()
-    
-    return model, config
-
-# =========================
-# Train on specific fold and evaluate on test.csv
-# =========================
-def train_on_fold_and_evaluate(train_df, val_df, test_df, fold_id, best_params, 
-                                feature_cols, pathogen_emb, pathogen2id, seq_dim, path_dim):
-    
-    log(f"\n{'='*70}")
-    log(f"Training on Fold {fold_id}")
-    log(f"{'='*70}")
-    log(f"Train size: {len(train_df)}, Val size: {len(val_df)}")
-    
-    # 标准化
-    y_train_raw = train_df["mic"].values
-    y_val_raw = val_df["mic"].values
-    
-    y_train_log = np.log1p(y_train_raw)
-    y_mean, y_std = y_train_log.mean(), y_train_log.std()
-    
-    y_train = (y_train_log - y_mean) / y_std
-    y_val = (np.log1p(y_val_raw) - y_mean) / y_std
-
-    train_df_copy = train_df.copy()
-    val_df_copy = val_df.copy()
-    test_df_copy = test_df.copy()
-    
-    for df in [train_df_copy, val_df_copy, test_df_copy]:
-        df["pid"] = df["pathogen"].map(pathogen2id)
-    
-    X_train = build_X(train_df_copy, feature_cols, pathogen_emb)
-    X_val = build_X(val_df_copy, feature_cols, pathogen_emb)
-    X_test = build_X(test_df_copy, feature_cols, pathogen_emb)
-    
-    y_test_raw = test_df_copy["mic"].values
-    y_test = (np.log1p(y_test_raw) - y_mean) / y_std
-    
-    train_loader = DataLoader(
-        AlignmentDataset(X_train, y_train, train_df_copy["pid"].values),
-        batch_size=best_params["batch_size"],
-        shuffle=True
-    )
-    val_loader = DataLoader(
-        AlignmentDataset(X_val, y_val, val_df_copy["pid"].values),
-        batch_size=best_params["batch_size"],
-        shuffle=False
-    )
-    test_loader = DataLoader(
-        AlignmentDataset(X_test, y_test, test_df_copy["pid"].values),
-        batch_size=best_params["batch_size"],
-        shuffle=False
-    )
-    
-    model = AlignmentModel(
-        seq_dim=seq_dim,
-        path_dim=path_dim,
-        hidden_dim=best_params["hidden_dim"],
-        use_align=True,
-        use_cross=True,
-    ).to(DEVICE)
-    
-    optimizer = optim.Adam(model.parameters(), lr=best_params["lr"])
-    
-    val_loss, trained_model = train_es(model, optimizer, train_loader, val_loader, 
-                                        MAX_EPOCHS, PATIENCE)
-    
-    log(f"Fold {fold_id} best val loss: {val_loss:.6f}")
-
-    fold_model_dir = os.path.join(FOLD_MODELS_DIR, f"fold_{fold_id}")
-    os.makedirs(fold_model_dir, exist_ok=True)
-    
-    save_model(
-        model=trained_model,
-        pathogen2id=pathogen2id,
-        y_mean=y_mean,
-        y_std=y_std,
-        feature_cols=feature_cols,
-        seq_dim=seq_dim,
-        path_dim=path_dim,
-        hidden_dim=best_params["hidden_dim"],
-        model_path=os.path.join(fold_model_dir, "model.pt"),
-        config_path=os.path.join(fold_model_dir, "config.json"),
-        norm_params_path=os.path.join(fold_model_dir, "norm_params.json"),
-        mapping_path=os.path.join(fold_model_dir, "mapping.json")
-    )
-
-    trained_model.eval()
-    preds, gts = [], []
-    with torch.no_grad():
-        for x, y, pid in test_loader:
-            pred = trained_model(x.to(DEVICE), path_id=pid.to(DEVICE))
-            preds.append(pred.cpu().numpy())
-            gts.append(y.numpy())
-    
-    preds = np.concatenate(preds)
-    gts = np.concatenate(gts)
-
-    metrics_norm = evaluate(gts, preds)
-
-    gts_log = gts * y_std + y_mean
-    preds_log = preds * y_std + y_mean
-    gts_mic = np.expm1(gts_log)
-    preds_mic = np.expm1(preds_log)
-
-    results_df = test_df_copy.copy()
-    results_df['predicted_mic'] = preds_mic
-    results_df['true_mic'] = gts_mic
-    results_df['predicted_mic_norm'] = preds
-    results_df['true_mic_norm'] = gts
-    results_df.to_csv(os.path.join(fold_model_dir, "test_predictions.csv"), index=False)
-    
-    log(f"Fold {fold_id} - MSE={metrics_norm['MSE']:.4f}, RMSE={metrics_norm['RMSE']:.4f}, R2={metrics_norm['R2']:.4f}, PCC={metrics_norm['PCC']:.4f}, Kendall={metrics_norm['Kendall']:.4f}")
-    
-    return {
-        "fold": fold_id,
-        "val_loss": val_loss,
-        "test_metrics_norm": metrics_norm,
-        "predictions_norm": preds,
-        "targets_norm": gts,
-        "predictions": preds_mic,
-        "targets": gts_mic,
-        "pathogens": test_df["pathogen"].values,
-        "y_mean": y_mean,
-        "y_std": y_std
-    }
-
-# =========================
-# Main 5-fold CV function
-# =========================
-def five_fold_cv():
+def grid_search():
     set_seed(SEED)
 
     if os.path.exists(LOG_FILE):
-        os.remove(LOG_FILE) 
-    
-    # =========================
-    # Load data
-    # =========================
-    data_5fold = pd.read_csv('data/data_5fold.csv')  
-    test_df = pd.read_csv(INDEPENDENT_TEST_PATH)    
+        os.remove(LOG_FILE)
+
+    # 加载数据
+    data_5fold = pd.read_csv('/root/autodl-tmp/QMAP_warmstart/split_data/data_5folds.csv')
+    test_df = pd.read_csv(INDEPENDENT_TEST_PATH)
+
     feature_cols = [c for c in data_5fold.columns if c.startswith("ESM_")]
 
-    pathogen_emb = torch.load(PATH_EMB_PATH)
+    # 加载病原体嵌入（key 是 taxid）
+    pathogen_emb = torch.load(PATH_EMB_PATH, map_location="cpu")
+
+    # 加载 name -> taxid 映射
+    name2taxid = load_name2taxid(TAXONOMY_JSON_PATH)
+    log(f"[Taxonomy] 载入 name->taxid: {len(name2taxid)} 条")
+
+    # 获取所有病原体（包括测试集中的）
     all_pathogens = pd.concat([
-        data_5fold["pathogen"], test_df["pathogen"]
+        data_5fold["pathogen"].astype(str).str.strip(),
+        test_df["pathogen"].astype(str).str.strip(),
     ]).unique()
     pathogen2id = {p: i for i, p in enumerate(all_pathogens)}
-    
+
     seq_dim = len(feature_cols)
     path_dim = next(iter(pathogen_emb.values())).numel()
-    
+
     # =========================
-    # Grid Search
+    # Grid Search: fold0 作验证，fold1-4 作训练
     # =========================
     log(f"{'='*70}")
-    log("STEP 1: GRID SEARCH (Validation: fold0, Training: fold1-4)")
+    log("GRID SEARCH (Validation: fold0, Training: fold1-4)")
     log(f"{'='*70}")
-    
+
     train_idx_gs = data_5fold['fold'] != 0
     val_idx_gs = data_5fold['fold'] == 0
-    
+
     train_df_gs = data_5fold[train_idx_gs].copy()
     val_df_gs = data_5fold[val_idx_gs].copy()
-    
+
     y_train_raw = train_df_gs["mic"].values
     y_val_raw = val_df_gs["mic"].values
-    
+
     y_train_log = np.log1p(y_train_raw)
     y_mean_gs, y_std_gs = y_train_log.mean(), y_train_log.std()
-    
+
     y_train = (y_train_log - y_mean_gs) / y_std_gs
     y_val = (np.log1p(y_val_raw) - y_mean_gs) / y_std_gs
 
     train_df_gs_copy = train_df_gs.copy()
     val_df_gs_copy = val_df_gs.copy()
-    
     for df in [train_df_gs_copy, val_df_gs_copy]:
+        df["pathogen"] = df["pathogen"].astype(str).str.strip()
         df["pid"] = df["pathogen"].map(pathogen2id)
-    
-    X_train_gs = build_X(train_df_gs_copy, feature_cols, pathogen_emb)
-    X_val_gs = build_X(val_df_gs_copy, feature_cols, pathogen_emb)
+
+    X_train_gs = build_X(train_df_gs_copy, feature_cols, pathogen_emb, name2taxid, warn_tag="gs-train")
+    X_val_gs   = build_X(val_df_gs_copy,   feature_cols, pathogen_emb, name2taxid, warn_tag="gs-val")
 
     param_grid = {
         "hidden_dim": [1024, 512, 256],
         "lr": [1e-4, 5e-4, 1e-3],
         "batch_size": [128, 64, 32],
     }
-    
     keys = list(param_grid.keys())
     values = list(param_grid.values())
-    n_combinations = np.prod([len(v) for v in values])
-    
+
+    # 排除的组合（已在别处验证过或不打算再搜）
+    EXCLUDED_PARAMS = [
+        {"hidden_dim": 1024, "lr": 1e-4,  "batch_size": 128},
+        {"hidden_dim": 1024, "lr": 1e-4,  "batch_size": 64},
+        {"hidden_dim": 1024, "lr": 1e-4,  "batch_size": 32},
+        {"hidden_dim": 1024, "lr": 5e-4,  "batch_size": 128},
+    ]
+    def is_excluded(params):
+        return any(
+            all(params[k] == ex[k] for k in keys)
+            for ex in EXCLUDED_PARAMS
+        )
+
+    n_total = int(np.prod([len(v) for v in values]))
+    n_combinations = n_total - sum(1 for c in itertools.product(*values)
+                                   if is_excluded(dict(zip(keys, c))))
+
     log(f"\nGrid Search Space: {param_grid}")
-    log(f"Total combinations: {n_combinations}")
+    log(f"Total combinations (raw): {n_total}")
+    log(f"Excluded: {n_total - n_combinations}")
+    log(f"Combinations to run: {n_combinations}")
+    log(f"GS_MAX_EPOCHS={GS_MAX_EPOCHS}, GS_PATIENCE={GS_PATIENCE}")
 
     best_val_loss = float("inf")
     best_params = None
-    
-    for idx, combo in enumerate(itertools.product(*values)):
+
+    all_results = []   # 记录每组结果，便于事后分析
+
+    run_idx = 0
+    for combo in itertools.product(*values):
         params = dict(zip(keys, combo))
-        
-        log(f"\n[{idx+1}/{n_combinations}] Testing: {params}")
-        
+
+        if is_excluded(params):
+            log(f"\n[skip] {params}  (在排除列表中)")
+            continue
+
+        run_idx += 1
+        set_seed(SEED)   # ← 每组重置种子，保证可比/可复现
+        log(f"\n[{run_idx}/{n_combinations}] Testing: {params}")
+
         train_loader = DataLoader(
             AlignmentDataset(X_train_gs, y_train, train_df_gs_copy["pid"].values),
-            batch_size=params["batch_size"],
-            shuffle=True
+            batch_size=params["batch_size"], shuffle=True
         )
         val_loader = DataLoader(
             AlignmentDataset(X_val_gs, y_val, val_df_gs_copy["pid"].values),
-            batch_size=params["batch_size"],
-            shuffle=False
+            batch_size=params["batch_size"], shuffle=False
         )
-        
+
         model = AlignmentModel(
-            seq_dim=seq_dim,
-            path_dim=path_dim,
+            seq_dim=seq_dim, path_dim=path_dim,
             hidden_dim=params["hidden_dim"],
-            use_align=True,
-            use_cross=True,
+            use_align=True, use_cross=True,
         ).to(DEVICE)
-        
         optimizer = optim.Adam(model.parameters(), lr=params["lr"])
-        
-        val_loss, _ = train_es(model, optimizer, train_loader, val_loader, 
-                                MAX_EPOCHS, PATIENCE)
-        
+
+        val_loss, _ = train_es(model, optimizer, train_loader, val_loader,
+                               GS_MAX_EPOCHS, GS_PATIENCE)
         log(f"  Best Val Loss: {val_loss:.6f}")
-        
+
+        all_results.append({**params, "val_loss": float(val_loss)})
+
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             best_params = params.copy()
             log(f"  >>> NEW BEST PARAMS! Val Loss: {val_loss:.6f}")
-    
+
+    # =========================
+    # 输出搜索结果
+    # =========================
     log(f"\n{'='*70}")
-    log(f"GRID SEARCH COMPLETE")
+    log("GRID SEARCH COMPLETE")
+    log(f"{'='*70}")
     log(f"Best Params: {best_params}")
-    log(f"Best Val Loss: {best_val_loss:.6f}")
-    
-    # =========================
-    # 5-fold cross-validation
-    # =========================
-    log(f"\n{'='*70}")
-    log("STEP 2: 5-FOLD CV WITH BEST PARAMETERS")
-    log(f"{'='*70}")
+    log(f"Best Val Loss (fold0): {best_val_loss:.6f}")
 
-    all_fold_results = []
-    
-    for fold_id in range(5):
-        val_idx = data_5fold['fold'] == fold_id
-        train_idx = data_5fold['fold'] != fold_id
-        
-        train_df_fold = data_5fold[train_idx].copy()
-        val_df_fold = data_5fold[val_idx].copy()
-        result = train_on_fold_and_evaluate(
-            train_df_fold, val_df_fold, test_df, fold_id, 
-            best_params, feature_cols, pathogen_emb, pathogen2id, seq_dim, path_dim
-        )
-        all_fold_results.append(result)
-    
-    # =========================
-    # Results
-    # =========================
-    log(f"\n{'='*70}")
-    log("FINAL RESULTS - 5-FOLD CROSS VALIDATION ON test.csv (Normalized Space)")
-    log(f"{'='*70}")
+    # 按 val_loss 排序打印全部结果
+    log("\n--- All Combinations Sorted by Val Loss ---")
+    for r in sorted(all_results, key=lambda x: x["val_loss"]):
+        log(f"hidden_dim={r['hidden_dim']:>4d}, lr={r['lr']:.0e}, "
+            f"batch_size={r['batch_size']:>3d}  ->  Val Loss: {r['val_loss']:.6f}")
 
-    norm_metrics = {metric: [] for metric in ['MSE', 'RMSE', 'R2', 'PCC', 'Kendall']}
-    
-    for result in all_fold_results:
-        for metric in norm_metrics:
-            norm_metrics[metric].append(result['test_metrics_norm'][metric])
-    
-    log("\n--- Normalized Space Metrics on test.csv ---")
-    for metric in norm_metrics:
-        mean_val = np.mean(norm_metrics[metric])
-        std_val = np.std(norm_metrics[metric])
-        log(f"{metric:10s}: {mean_val:.4f} ± {std_val:.4f}")
-
-    log("\n--- Per-fold Results on test.csv ---")
-    for result in all_fold_results:
-        fold = result['fold']
-        metrics = result['test_metrics_norm']
-        log(f"Fold {fold}: MSE={metrics['MSE']:.4f}, RMSE={metrics['RMSE']:.4f}, R2={metrics['R2']:.4f}, PCC={metrics['PCC']:.4f}, Kendall={metrics['Kendall']:.4f}")
-
-    log("\n--- Per-pathogen Statistics Across 5 Folds ---")
-
-    pathogen_fold_metrics = {}
-    
-    for result in all_fold_results:
-        pathogens = result['pathogens']
-        predictions_norm = result['predictions_norm']
-        targets_norm = result['targets_norm']
-
-        fold_pathogen_metrics = {}
-        for i, pathogen in enumerate(pathogens):
-            if pathogen not in fold_pathogen_metrics:
-                fold_pathogen_metrics[pathogen] = {'targets': [], 'predictions': []}
-            fold_pathogen_metrics[pathogen]['targets'].append(targets_norm[i])
-            fold_pathogen_metrics[pathogen]['predictions'].append(predictions_norm[i])
-
-        for pathogen, data in fold_pathogen_metrics.items():
-            if len(data['targets']) >= 2:
-                metrics = evaluate(np.array(data['targets']), np.array(data['predictions']))
-                if pathogen not in pathogen_fold_metrics:
-                    pathogen_fold_metrics[pathogen] = []
-                pathogen_fold_metrics[pathogen].append(metrics)
-
-    for pathogen, metrics_list in pathogen_fold_metrics.items():
-        if len(metrics_list) == 5:
-            r2_list = [m['R2'] for m in metrics_list]
-            pcc_list = [m['PCC'] for m in metrics_list]
-            rmse_list = [m['RMSE'] for m in metrics_list]
-            
-            log(f"{pathogen:25s} | MSE: {np.mean(r2_list):.4f} ± {np.std(r2_list):.4f} | "
-                f"RMSE: {np.mean(rmse_list):.4f} ± {np.std(rmse_list):.4f}"
-                f"R2: {np.mean(r2_list):.4f} ± {np.std(r2_list):.4f} | "
-                f"PCC: {np.mean(pcc_list):.4f} ± {np.std(pcc_list):.4f} | "
-                f"Kendall: {np.mean([m['Kendall'] for m in metrics_list]):.4f} ± {np.std([m['Kendall'] for m in metrics_list]):.4f}")
-            
-    log("\n--- Ensemble Prediction Statistics ---")
-    all_predictions_norm = np.array([r['predictions_norm'] for r in all_fold_results])
-    pred_mean_norm = np.mean(all_predictions_norm, axis=0)
-
-    targets_norm = all_fold_results[0]['targets_norm']
-    ensemble_metrics_norm = evaluate(targets_norm, pred_mean_norm)
-    log(f"Ensemble (mean): R2={ensemble_metrics_norm['R2']:.4f}, PCC={ensemble_metrics_norm['PCC']:.4f}, RMSE={ensemble_metrics_norm['RMSE']:.4f}")
-
-    ensemble_results = test_df.copy()
-    all_predictions_mic = np.array([r['predictions'] for r in all_fold_results])
-    ensemble_results['predicted_mic_mean'] = np.mean(all_predictions_mic, axis=0)
-    ensemble_results['predicted_mic_std'] = np.std(all_predictions_mic, axis=0)
-    for i, result in enumerate(all_fold_results):
-        ensemble_results[f'fold_{i}_predicted_mic'] = result['predictions']
-    ensemble_results.to_csv(os.path.join(OUT_DIR, "ensemble_predictions.csv"), index=False)
-    
-    # =========================
-    # Save results
-    # =========================
+    # 保存 JSON
     summary = {
-        "best_params": best_params,
-        "best_val_loss_in_grid_search": float(best_val_loss),
-        "cv_results_on_test_csv": {
-            "normalized_space": {metric: {"mean": float(np.mean(norm_metrics[metric])), 
-                                          "std": float(np.std(norm_metrics[metric]))} 
-                                for metric in norm_metrics},
-            "per_fold": [
-                {
-                    "fold": r["fold"],
-                    "val_loss": r["val_loss"],
-                    "test_metrics_norm": r["test_metrics_norm"]
-                }
-                for r in all_fold_results
-            ]
+        "search_setting": {
+            "validation_fold": 0,
+            "train_folds": [1, 2, 3, 4],
+            "gs_max_epochs": GS_MAX_EPOCHS,
+            "gs_patience": GS_PATIENCE,
+            "seed": SEED,
         },
-        "ensemble_metrics_norm": ensemble_metrics_norm
+        "best_params": best_params,
+        "best_val_loss": float(best_val_loss),
+        "all_results": all_results,
     }
-    
-    with open(os.path.join(OUT_DIR, "5fold_cv_summary.json"), 'w') as f:
+    out_json = os.path.join(OUT_DIR, "grid_search_summary.json")
+    with open(out_json, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2)
-    
-    log(f"\nResults saved to: {os.path.join(OUT_DIR, '5fold_cv_summary.json')}")
+    log(f"\nResults saved to: {out_json}")
+
+    # 额外：把 best_params 单独存一份，方便后续 5 折 CV 脚本读取
+    best_params_path = os.path.join(OUT_DIR, "best_params.json")
+    with open(best_params_path, "w", encoding="utf-8") as f:
+        json.dump(best_params, f, indent=2)
+    log(f"Best params saved to: {best_params_path}")
+
     log("=" * 70)
-    log("5-FOLD CROSS VALIDATION COMPLETE!")
+    log("GRID SEARCH DONE!")
     log("=" * 70)
+
+    return best_params
+
 
 if __name__ == "__main__":
-    five_fold_cv()
+    grid_search()
